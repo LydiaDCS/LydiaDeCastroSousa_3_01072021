@@ -13,7 +13,7 @@ body {
 
 * {
   box-sizing: border-box;
-  background-color: #f2f2f2;
+  background-color: #9356DC;
 }
 
 a {
@@ -21,7 +21,7 @@ a {
   color: black;
 }
 
-.headercontainer {
+.headerreservationloca {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -42,7 +42,7 @@ a {
   font-weight: bold;
 }
 
-.headerreservationloca {
+.headerreservationloca_container {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -53,10 +53,10 @@ a {
   box-shadow: 0px 2px 4px 0px #afaeae inset;
   width: 100%;
 }
-.headerreservationloca_logo {
+.headerreservationloca_container_logo {
   margin-right: 15px;
 }
-.headerreservationloca_texte {
+.headerreservationloca_container_texte {
   margin: 0;
   padding-right: 30px;
 }
