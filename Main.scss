@@ -1,7 +1,9 @@
+/*Toutes les pages*/
 @import url('https://fonts.googleapis.com/css2? family= Shrikhand & display=swap');
 
 @import url('https://fonts.googleapis.com/css2? family= Roboto & display=swap');
 
+/*Page Accueil*/
 
 @import "./utils/variables";
 
@@ -23,25 +25,26 @@ html,
     text-decoration-line: none;
     color:black;
   }
-  .headerreservationloca{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+  .bold {
+    font-weight: bold;
   }
+
   .headerlogo{
     text-align: center;
     padding: 16px;
     position: relative;
     font-family : 'Shrikhand', cursif ;
-  }
-  .headerlogo_img{
-    margin: 0;
-  }
-  .bold {
-    font-weight: bold;
+    .headerlogo_img{
+      margin: 0;
+    }
   }
   
-  .headerreservationloca_container {
+  
+  .headerreservationloca{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    &_container {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -51,6 +54,7 @@ html,
     padding: 20px 0px;
     box-shadow:0px 2px 4px 0px #afaeae inset;
     width: 100%;
+    }
     &_logo{
       margin-right: 15px;
     }
@@ -58,8 +62,7 @@ html,
       margin: 0;
       padding-right: 30px;
     }
-  }
-  
+}
   
   .headerreservationtexte{
     background-color: #f5f5f5;
