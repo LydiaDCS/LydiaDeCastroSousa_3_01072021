@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2? family= Roboto & display=swap');
 
+
 @import "./utils/variables";
 
 html,
@@ -17,7 +18,6 @@ html,
   
   *{
     box-sizing: border-box;
-    background-color:$color-primary;
   }
   a{
     text-decoration-line: none;
