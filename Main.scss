@@ -38,7 +38,13 @@ a {
     margin: 0;
   }
 }
-
+.headerdesktop{
+  @media (min-width:1100px){
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}
 .headerreservationloca {
   display: flex;
   flex-direction: column;
@@ -57,7 +63,7 @@ a {
   &_logo {
     margin-right: 15px;
     @media (min-width: 1100px) {
-      font-size: 120px;
+      font-size: 30px;
       height: 100%;
       max-height: 100%;
     }
@@ -65,11 +71,6 @@ a {
   &_texte {
     margin: 0;
     padding-right: 30px;
-  }
-  @media (min-width: 1100px) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 400px;
   }
 }
 
@@ -120,7 +121,7 @@ a {
     @media (min-width: 1100px) {
       font-size: 23px;
       background-color: #e9e9e9;
-      padding: 20px 0px;
+      padding: 22px 0px;
       margin-bottom: 0;
       box-shadow: 0px 2px 4px 0px #afaeae inset;
       width: 100%;
