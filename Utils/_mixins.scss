@@ -1,0 +1,3 @@
+@mixin dégradé {
+    background-image: linear-gradient(0deg, $color-primary, $color-secondary);
+  }
