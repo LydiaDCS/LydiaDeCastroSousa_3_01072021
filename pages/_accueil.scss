@@ -125,6 +125,9 @@
         cursor: pointer;
         transform: scale(1.02);
         background-color: #e5dbf1;
+        .fonctionnement_logo{
+          color: $color-primary;
+        }
       }
       @media (min-width: 1100px) {
         background-color: $color-white;
@@ -154,9 +157,6 @@
       margin-right: 20px;
       color: $shadows-color;
       font-size: 1.1rem;
-      &:hover {
-        color: $color-primary;
-      }
     }
     @media (min-width: 1100px) {
       padding: 0;
@@ -291,5 +291,9 @@
     @media (min-width: 1100px) {
       background-color: $color-white;
     }
+  }
+  .menu_entrées{
+    display:flex;
+    flex-direction: row;
   }
  

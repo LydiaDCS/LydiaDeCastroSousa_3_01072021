@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*Page Accueil*/
 /*Toutes les pages*/
 @import url("https://fonts.googleapis.com/css2? family= Shrikhand & display=swap");
@@ -219,6 +220,9 @@ a {
   transform: scale(1.02);
   background-color: #e5dbf1;
 }
+.fonctionnement_part:hover .fonctionnement_logo {
+  color: #9356DC;
+}
 @media (min-width: 1100px) {
   .fonctionnement_part {
     background-color: #fff;
@@ -248,9 +252,6 @@ a {
   margin-right: 20px;
   color: #afaeae;
   font-size: 1.1rem;
-}
-.fonctionnement_logo:hover {
-  color: #9356DC;
 }
 @media (min-width: 1100px) {
   .fonctionnement {
@@ -397,6 +398,11 @@ a {
   .restaurants {
     background-color: #fff;
   }
+}
+
+.menu_entrées {
+  display: flex;
+  flex-direction: row;
 }
 
 /*# sourceMappingURL=style.css.map */
