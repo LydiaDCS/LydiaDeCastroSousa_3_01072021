@@ -1,7 +1,7 @@
+/*Page Accueil*/
 /*Toutes les pages*/
 @import url("https://fonts.googleapis.com/css2? family= Shrikhand & display=swap");
 @import url("https://fonts.googleapis.com/css2? family= Roboto & display=swap");
-/*Page Accueil*/
 html,
 body {
   font-family: "Roboto", sans-serif;
@@ -36,6 +36,43 @@ a {
   margin: 0;
 }
 
+/*Footer*/
+.footer {
+  background-color: #272626;
+  height: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.footer_img {
+  margin-right: 10px;
+  font-size: 9px;
+}
+.footer_logo {
+  font-family: "Shrikhand", cursif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  font-style: italic;
+}
+.footer_link {
+  color: #fff;
+  font-weight: 300;
+}
+.footer_list {
+  list-style: none;
+  padding: 0px 0px;
+  width: 100%;
+}
+.footer_listtexte {
+  padding-bottom: 10px;
+}
+
 @media (min-width: 1100px) {
   .headerdesktop {
     display: grid;
@@ -54,35 +91,42 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: baseline;
-  font-size: 17px;
   background-color: #e9e9e9;
-  padding: 20px 0px;
-  box-shadow: 0px 2px 4px 0px #afaeae inset;
+  padding: 22px 0px;
   width: 100%;
+  box-shadow: 0px 2px 4px 0px #afaeae inset;
 }
 .headerreservationloca_logo {
   margin-right: 15px;
+  font-size: 20px;
 }
 @media (min-width: 1100px) {
   .headerreservationloca_logo {
-    font-size: 30px;
+    font-size: 23px;
     height: 100%;
     max-height: 100%;
   }
 }
 .headerreservationloca_texte {
   margin: 0;
+  font-size: 20px;
   padding-right: 30px;
+}
+@media (min-width: 1100px) {
+  .headerreservationloca_texte {
+    font-size: 23px;
+  }
 }
 
 .headerreservationtexte {
   background-color: #f5f5f5;
   padding: 45px;
-  height: auto;
+  padding-bottom: 65px;
+  height: 100%;
 }
 .headerreservationtexte_title {
   margin: 0;
-  font-size: 24px;
+  font-size: 23px;
 }
 .headerreservationtexte_byline {
   margin-bottom: 40px;
@@ -91,7 +135,7 @@ a {
 @media (min-width: 1100px) {
   .headerreservationtexte_byline {
     font-size: 20px;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
   }
 }
 .headerreservationtexte_bouton {
@@ -101,14 +145,18 @@ a {
   font-size: 1.1rem;
   border-radius: 50px;
   color: #fff;
-  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
   cursor: pointer;
   box-shadow: 3px 3px 10px rgba(7, 7, 7, 0.25);
+  transition: transform 450ms;
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
 }
 @media (min-width: 1100px) {
   .headerreservationtexte_bouton {
     font-size: 20px;
   }
+}
+.headerreservationtexte_bouton:hover {
+  transform: scale(1.2);
 }
 @media (min-width: 1100px) {
   .headerreservationtexte {
@@ -149,7 +197,7 @@ a {
     box-shadow: 0px 2px 4px 0px #afaeae inset;
     justify-content: space-evenly;
     padding: 30px 15%;
-    row-gap: 2rem;
+    row-gap: 1rem;
   }
 }
 .fonctionnement_part {
@@ -173,7 +221,7 @@ a {
 }
 @media (min-width: 1100px) {
   .fonctionnement_part {
-    background-color: white;
+    background-color: #fff;
   }
 }
 .fonctionnement_part:nth-child(1) {
@@ -188,7 +236,7 @@ a {
 .fonctionnement_number {
   padding: 8px 12px;
   background-color: #9356DC;
-  color: white;
+  color: #fff;
   border-radius: 50%;
   position: absolute;
   left: -1rem;
@@ -198,7 +246,7 @@ a {
 .fonctionnement_logo {
   padding-left: 1.5rem;
   margin-right: 20px;
-  color: gray;
+  color: #afaeae;
   font-size: 1.1rem;
 }
 .fonctionnement_logo:hover {
@@ -269,7 +317,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  height: 15rem;
+  height: 17rem;
   transition-duration: 0.1s;
   margin-right: 0px;
   margin-left: 0px;
@@ -347,46 +395,8 @@ a {
 }
 @media (min-width: 1100px) {
   .restaurants {
-    background-color: white;
+    background-color: #fff;
   }
-}
-
-/**/
-/*Footer*/
-.footer {
-  background-color: #272626;
-  height: 100%;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 2rem 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-.footer_img {
-  margin-right: 10px;
-  font-size: 9px;
-}
-.footer_logo {
-  font-family: "Shrikhand", cursif;
-  font-size: 1.5rem;
-  font-weight: 900;
-  font-style: italic;
-}
-.footer_link {
-  color: white;
-  font-weight: 300;
-}
-.footer_list {
-  list-style: none;
-  padding: 0px 0px;
-  width: 100%;
-}
-.footer_listtexte {
-  padding-bottom: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

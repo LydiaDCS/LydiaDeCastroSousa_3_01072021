@@ -1,0 +1,36 @@
+ /*Footer*/
+ .footer {
+    background-color: rgb(39, 38, 38);
+    height: 100%;
+    color: $color-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    &_img {
+      margin-right: 10px;
+      font-size: 9px;
+    }
+    &_logo {
+      font-family: "Shrikhand", cursif;
+      font-size: 1.5rem;
+      font-weight: 900;
+      font-style: italic;
+    }
+    &_link {
+      color: $color-white;
+      font-weight: 300;
+    }
+    &_list {
+      list-style: none;
+      padding: 0px 0px;
+      width: 100%;
+    }
+    &_listtexte {
+      padding-bottom: 10px;
+    }
+  }

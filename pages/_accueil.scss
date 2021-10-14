@@ -14,44 +14,43 @@
       flex-direction: row;
       justify-content: center;
       align-items: baseline;
-      font-size: 17px;
-      background-color: #e9e9e9;
+      background-color: $gray;
       padding: 22px 0px;
-      box-shadow: 0px 2px 4px 0px #afaeae inset;
       width: 100%;
+      @include inset-shadow;
     }
     &_logo {
       margin-right: 15px;
-      font-size:20px;
+      font-size: $font-size;
       @media (min-width: 1100px) {
-        font-size: 23px;
+        font-size: $title-font-size;
         height: 100%;
         max-height: 100%;
       }
     }
     &_texte {
       margin: 0;
-      font-size: 20px;
+      font-size:$font-size;
       padding-right: 30px;
       @media (min-width:1100px){
-      font-size: 23px;
+      font-size: $title-font-size;
       }
     }
   }
   .headerreservationtexte {
-    background-color: #f5f5f5;
+    background-color: $light-gray;
     padding: 45px;
     padding-bottom:65px;
     height: 100%;
     &_title {
       margin: 0;
-      font-size: 24px;
+      font-size: $title-font-size;
     }
     &_byline {
       margin-bottom: 40px;
       font-size: 16px;
       @media (min-width: 1100px) {
-        font-size: 20px;
+        font-size: $font-size;
         margin-bottom: 60px;
       }
     }
@@ -61,16 +60,20 @@
       font-weight: 500;
       font-size: 1.1rem;
       border-radius: 50px;
-      color: #fff;
+      color: $color-white;
       cursor: pointer;
       box-shadow: 3px 3px 10px rgba(7, 7, 7, 0.25);
+      transition: transform 450ms;
       @include dégradé;
         @media (min-width: 1100px) {
-          font-size: 20px;
+          font-size: $font-size;
+        }
+        &:hover{
+          transform:scale(1.2);
         }
     }
     @media (min-width: 1100px) {
-      @include $desktop-shadows;
+      @include inset-shadow;
       height: 100%;
       max-height: 100%;
       padding: 60px;
@@ -84,11 +87,11 @@
       margin-top: 0;
       margin-bottom: 30px;
       @media (min-width: 1100px) {
-        font-size: 23px;
-        background-color: #e9e9e9;
+        font-size: $title-font-size;
+        background-color: $gray;
         padding: 22px 0px;
         margin-bottom: 0;
-        @include $desktop-shadows;
+        @include inset-shadow;
         width: 100%;
         text-align: center;
       }
@@ -99,7 +102,7 @@
       display: flex;
       flex-direction: column;
       @media (min-width: 1100px) {
-        box-shadow: 0px 2px 4px 0px #afaeae inset;
+        @include inset-shadow;
         justify-content: space-evenly;
         padding: 30px 15%;
         row-gap: 1rem;
@@ -113,7 +116,7 @@
       font-weight: bold;
       font-size: 16px;
       transition-duration: 0.25s;
-      background-color: #f6f6f6;
+      background-color:$background-color;
       padding: 1.5rem;
       border-radius: 1.5rem;
       box-shadow: 0.25rem 0.25rem 0.5rem rgba(136, 136, 136, 0.25);
@@ -124,7 +127,7 @@
         background-color: #e5dbf1;
       }
       @media (min-width: 1100px) {
-        background-color: white;
+        background-color: $color-white;
       }
     }
     &_part:nth-child(1) {
@@ -139,7 +142,7 @@
     &_number {
       padding: 8px 12px;
       background-color: $color-primary;
-      color: white;
+      color: $color-white;
       border-radius: 50%;
       position: absolute;
       left: -1rem;
@@ -149,7 +152,7 @@
     &_logo {
       padding-left: 1.5rem;
       margin-right: 20px;
-      color: gray;
+      color: $shadows-color;
       font-size: 1.1rem;
       &:hover {
         color: $color-primary;
@@ -163,7 +166,7 @@
     }
     &_container {
       @media (min-width: 1100px) {
-        background-color: #f5f5f5;
+        background-color:$light-gray;
       }
     }
   }
@@ -172,7 +175,7 @@
     display: grid;
     column-gap: 2rem;
     row-gap: 2rem;
-    background-color: #f6f6f6;
+    background-color: $background-color;
     border-radius: 0;
     margin: 0;
     overflow: hidden;
@@ -286,42 +289,7 @@
       font-size: 100%;
     }
     @media (min-width: 1100px) {
-      background-color: white;
+      background-color: $color-white;
     }
   }
-  /*Footer*/
-  .footer {
-    background-color: rgb(39, 38, 38);
-    height: 100%;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 2rem 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    &_img {
-      margin-right: 10px;
-      font-size: 9px;
-    }
-    &_logo {
-      font-family: "Shrikhand", cursif;
-      font-size: 1.5rem;
-      font-weight: 900;
-      font-style: italic;
-    }
-    &_link {
-      color: white;
-      font-weight: 300;
-    }
-    &_list {
-      list-style: none;
-      padding: 0px 0px;
-      width: 100%;
-    }
-    &_listtexte {
-      padding-bottom: 10px;
-    }
-  }
+ 
