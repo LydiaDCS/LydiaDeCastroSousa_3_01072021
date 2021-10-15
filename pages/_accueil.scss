@@ -266,13 +266,17 @@
       flex-direction: row;
       justify-content: space-between;
     }
+    /* revoir*/
     &_logo {
       font-size: 25px;
       margin-right: 20px;
       margin-top: 20px;
       margin-bottom: 30px;
+      background-color:$color-white;
       &:hover {
-        @include dégradé;
+          .restaurants_logo--active{
+            @include dégradé;
+          }
       }
     }
     &_cardDesc {
@@ -292,8 +296,5 @@
       background-color: $color-white;
     }
   }
-  .menu_entrées{
-    display:flex;
-    flex-direction: row;
-  }
+
  
