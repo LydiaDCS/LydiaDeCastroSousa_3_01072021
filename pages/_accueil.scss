@@ -1,3 +1,16 @@
+.headerlogo {
+  text-align: center;
+  padding: 16px;
+  position: relative;
+  font-family: "Shrikhand", cursif;
+  display:flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
+  .headerlogo_img {
+    margin: 0;
+  }
+}
 .headerdesktop{
     @media (min-width:1100px){
       display: grid;
@@ -63,15 +76,20 @@
       color: $color-white;
       cursor: pointer;
       box-shadow: 3px 3px 10px rgba(7, 7, 7, 0.25);
-      transition: transform 450ms;
       @include dégradé;
+      transform:scale(1);
+      transition: all 0.25s ease-in-out;
+      display: inline-block;
+        &:hover{
+          background-image: linear-gradient(0deg, $color-primary-light, $color-secondary-light);
+          transform: scale(1.02);
+          box-shadow: 5px 5px 10px rgba(7, 7, 7, 0.4);
+        }
         @media (min-width: 1100px) {
           font-size: $font-size;
         }
-        &:hover{
-          transform:scale(1.2);
-        }
     }
+
     @media (min-width: 1100px) {
       @include inset-shadow;
       height: 100%;
@@ -115,7 +133,7 @@
       align-items: baseline;
       font-weight: bold;
       font-size: 16px;
-      transition-duration: 0.25s;
+      transition: all 0.25s;
       background-color:$background-color;
       padding: 1.5rem;
       border-radius: 1.5rem;
@@ -273,10 +291,13 @@
       margin-top: 20px;
       margin-bottom: 30px;
       background-color:$color-white;
-      &:hover {
-          .restaurants_logo--active{
-            @include dégradé;
-          }
+      color:black;
+      &::before{
+        background-color:$color-white;
+        color:black;
+      }
+      &::after {
+        background-image: linear-gradient(0deg, $color-primary, $color-secondary);
       }
     }
     &_cardDesc {
@@ -296,5 +317,6 @@
       background-color: $color-white;
     }
   }
+
 
  
