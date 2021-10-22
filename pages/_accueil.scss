@@ -290,16 +290,33 @@
       margin-right: 20px;
       margin-top: 20px;
       margin-bottom: 30px;
+      position:relative;
+      z-index:1;
+      cursor:pointer;
+      &::before{
+        content:"";
       background-color:$color-white;
       color:black;
-      &::before{
-        background-color:$color-white;
-        color:black;
       }
-      &::after {
-        background-image: linear-gradient(0deg, $color-primary, $color-secondary);
+      &:hover{
+        &::after{
+          opacity:1;
+        }
+      }
+      &::after{
+        content:"";
+        position:absolute;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+        background-color: linear-gradient(0deg, $color-primary, $color-secondary, 5);
+        opacity:0;
+        z-index:-1;
+        transition:opacity 250ms;
       }
     }
+    /**/
     &_cardDesc {
       display: flex;
       flex-direction: column;

@@ -1,17 +1,14 @@
 .headerlogo {
     padding: 16px;
     font-family: "Shrikhand", cursif;
+    text-align:center;
     &_img {
       margin: 0;
-      text-align:center;
     }
   }
-.arrow_back{
-    
-}
-
 .menurestaurantsimg{
-    height: 250px;
+    height: 300px;
+    max-width:100%;
     width: 100%; 
 }
 .menu{
@@ -28,7 +25,7 @@
 &_headertitle{
     font-size: 40px;
     font-family: "Shrikhand", cursif;
-    font-weight: bold;
+    font-weight: 900;
     font-style: italic;
     padding-right:45px;
 
@@ -36,15 +33,23 @@
 &_headerlogo{
     font-size:$title-font-size;
     font-family: "Shrikhand", cursif;
+
 }
-&_entrées{
-    
+&_entrées, &_plats, &_desserts{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
 }
-&_entréestitle, &_platstitle, &_dessertstitle{
+&_title{
     padding:0.8rem;
     text-transform: uppercase;
+    border-bottom:solid 3.5px $color-green;
+    padding-bottom:5px;
+    padding-left:0;
+    width:45px;
+    margin-bottom:10px;
 }
-&_entréescard, &_platscard, &_dessertscard{
+&_card{
     display: flex;
     flex-direction: column;
     align-items: baseline;
@@ -63,34 +68,53 @@
         transform:scaleX(1.02);
     }
 }
-&_entréescardtitle, &_platscardtitle, &_dessertscardtitle{
+&_cardtitle{
     margin: 0;
 }
-&_entréescardprices, &_platscardprices, &_dessertscardprices{
+&_desc{
    display:flex;
+   flex-direction:row;
    justify-content: space-between;
    align-items:baseline;
+   cursor:pointer;
+}  
 }
+.menudesktop{
+    @media (min-width:1100px){
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap:2rem;
+    }
 }
-.bouton_reservation{
-    &_bouton {
-        display: flex;
-        border: 0;
-        padding: 0.9rem 0.5rem;
-        font-weight: 500;
-        font-size: 1.1rem;
-        border-radius: 50px;
-        color: $color-white;
-        cursor: pointer;
-        box-shadow: 3px 3px 10px rgba(7, 7, 7, 0.25);
-        transition: transform 450ms;
-        @include dégradé;
-        margin: 20px;
-          @media (min-width: 1100px) {
-            font-size: $font-size;
-          }
-          &:hover{
+.bouton{
+    display:flex;
+    justify-content:center;
+&_container{
+    text-align:center;
+    border: 0;
+    padding: 1rem;
+    font-weight: 540;
+    width:210px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px rgba(7, 7, 7, 0.25);
+    transition: all 0.25s ease-in-out;
+    @include dégradé;
+    margin: 20px;
+    @media (min-width: 1100px) {
+        font-size: $font-size;
+        }
+        &:hover{
+            background-image: linear-gradient(0deg, $color-primary-light, $color-secondary-light);
             transform:scale(1.02);
-          }
-      }
+            box-shadow: 5px 5px 10px rgba(7, 7, 7, 0.4);
+        } 
+}
+    &_reservation{
+        color:$color-white;
+    }     
+}
+.check{
+    background-color:$color-green;
+    color:$color-white;
 }
