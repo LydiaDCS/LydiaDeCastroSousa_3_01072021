@@ -56,6 +56,7 @@
     font-size: 16px;
     background-color:$color-white;
     padding: 0.8rem;
+    width:100%;
     margin-bottom:20px;
     border-radius: 1.5rem;
     box-shadow: 0.25rem 0.25rem 0.5rem rgba(136, 136, 136, 0.25);
@@ -63,7 +64,6 @@
     cursor:pointer;
     transform:scaleX(1);
     &:hover{
-        transform-origin: left 50%;
         transition: transform 0.25s cubic-bezier(.32,0,.07,1);;
         transform:scaleX(1.02);
     }
@@ -78,7 +78,32 @@
    align-items:baseline;
    cursor:pointer;
 }  
+&_desctiltle{
+    justify-items:flex-start;
+       }
+&_descprice{
+    justify-items:flex-end;
+       }
 }
+/*revoir*/
+.visible{
+    font-size:2.5rem;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    &:hover + .check{
+    transform:rotate (1turn), scaleX(0.5);
+    transform-origin:right;
+    visibility:visible;
+    }
+}
+.check{
+    background-color:$color-green;
+    color:white;
+    visibility:hidden;
+    transition:all 500ms ease-in-out;
+}
+/**/
 .menudesktop{
     @media (min-width:1100px){
         display:grid;
@@ -86,6 +111,23 @@
         column-gap:2rem;
     }
 }
+/*revoir*/
+.menu_card{
+    animation:app 1000ms both;
+    transform-origin:top; 
+    opacity:0;
+    
+}
+@keyframes app{
+    0%{
+    transform :scaley(0);
+    }
+    to{
+    transform :scaley(1);
+    opacity:1;
+    }
+}
+/**/
 .bouton{
     display:flex;
     justify-content:center;
@@ -114,7 +156,6 @@
         color:$color-white;
     }     
 }
-.check{
-    background-color:$color-green;
-    color:$color-white;
-}
+
+
+

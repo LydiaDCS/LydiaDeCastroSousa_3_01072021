@@ -490,6 +490,7 @@ a {
   font-size: 16px;
   background-color: #fff;
   padding: 0.8rem;
+  width: 100%;
   margin-bottom: 20px;
   border-radius: 1.5rem;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(136, 136, 136, 0.25);
@@ -498,7 +499,6 @@ a {
   transform: scaleX(1);
 }
 .menu_card:hover {
-  transform-origin: left 50%;
   transition: transform 0.25s cubic-bezier(0.32, 0, 0.07, 1);
   transform: scaleX(1.02);
 }
@@ -512,7 +512,34 @@ a {
   align-items: baseline;
   cursor: pointer;
 }
+.menu_desctiltle {
+  justify-items: flex-start;
+}
+.menu_descprice {
+  justify-items: flex-end;
+}
 
+/*revoir*/
+.visible {
+  font-size: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.visible:hover + .check {
+  transform: rotate 1turn, scaleX(0.5);
+  transform-origin: right;
+  visibility: visible;
+}
+
+.check {
+  background-color: #99E2D0;
+  color: white;
+  visibility: hidden;
+  transition: all 500ms ease-in-out;
+}
+
+/**/
 @media (min-width: 1100px) {
   .menudesktop {
     display: grid;
@@ -521,6 +548,23 @@ a {
   }
 }
 
+/*revoir*/
+.menu_card {
+  animation: app 1000ms both;
+  transform-origin: top;
+  opacity: 0;
+}
+
+@keyframes app {
+  0% {
+    transform: scaley(0);
+  }
+  to {
+    transform: scaley(1);
+    opacity: 1;
+  }
+}
+/**/
 .bouton {
   display: flex;
   justify-content: center;
@@ -549,11 +593,6 @@ a {
   box-shadow: 5px 5px 10px rgba(7, 7, 7, 0.4);
 }
 .bouton_reservation {
-  color: #fff;
-}
-
-.check {
-  background-color: #99E2D0;
   color: #fff;
 }
 
