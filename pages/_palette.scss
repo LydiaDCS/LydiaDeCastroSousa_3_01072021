@@ -2,9 +2,16 @@
     padding: 16px;
     font-family: "Shrikhand", cursif;
     text-align:center;
+    position:relative;
     &_img {
       margin: 0;
     }
+  }
+.arrow_back{
+position:absolute;
+left:0;
+padding:1.5rem;
+font-size:20px;
   }
 .menurestaurantsimg{
     height: 300px;
@@ -84,14 +91,14 @@
     justify-items:flex-end;
        }
 }
-/*revoir*/
+/*revoir- voir le cours exemple*/
 .visible{
     font-size:1rem;
     display: flex;
     flex-direction:row;
     align-items: baseline;
     &:hover + .check{
-    animation:rotate (1turn), scaleX(0.5);
+    animation:rotate (1turn), scaleX(0.5) translate (-200%);
     opacity:1;
     width:100%;
     }
@@ -99,7 +106,8 @@
 .check{
     background-color:$color-green;
     color:white;
-    opacity:1;
+    opacity:0;
+    width:0%;
     
 }
 /**/
@@ -173,7 +181,7 @@
         }
         &:hover{
             background-image: linear-gradient(0deg, $color-primary-light, $color-secondary-light);
-            transform:scale(1.02);
+            transform:scale(1.03);
             box-shadow: 5px 5px 10px rgba(7, 7, 7, 0.4);
         } 
 }
