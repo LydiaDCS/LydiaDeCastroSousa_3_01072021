@@ -12,6 +12,7 @@
     width: 100%; 
 }
 .menu{
+    overflow-x:hidden;
     display: flex;
     flex-direction:column;
     background-color:$background-color; 
@@ -47,13 +48,9 @@
     padding-bottom:5px;
     padding-left:0;
     width:45px;
-    margin-bottom:10px;
+    margin-bottom:20px;
 }
 &_card{
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    font-size: 16px;
     background-color:$color-white;
     padding: 0.8rem;
     width:100%;
@@ -70,6 +67,7 @@
 }
 &_cardtitle{
     margin: 0;
+    font-size:18px;
 }
 &_desc{
    display:flex;
@@ -77,6 +75,7 @@
    justify-content: space-between;
    align-items:baseline;
    cursor:pointer;
+   font-size:15px;
 }  
 &_desctiltle{
     justify-items:flex-start;
@@ -87,21 +86,21 @@
 }
 /*revoir*/
 .visible{
-    font-size:2.5rem;
-    display:flex;
+    font-size:1rem;
+    display: flex;
     flex-direction:row;
-    align-items:center;
+    align-items: baseline;
     &:hover + .check{
-    transform:rotate (1turn), scaleX(0.5);
-    transform-origin:right;
-    visibility:visible;
+    animation:rotate (1turn), scaleX(0.5);
+    opacity:1;
+    width:100%;
     }
 }
 .check{
     background-color:$color-green;
     color:white;
-    visibility:hidden;
-    transition:all 500ms ease-in-out;
+    opacity:1;
+    
 }
 /**/
 .menudesktop{
@@ -146,10 +145,10 @@
 }
 @keyframes app{
     0%{
-    transform :scaley(0);
+    transform :scaley(0) translatey(-30%);
     }
     to{
-    transform :scaley(1);
+    transform :scaley(1) translate(0);
     opacity:1;
     }
 }
