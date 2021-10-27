@@ -7,17 +7,10 @@
   flex-direction:row;
   justify-content: center;
   align-items: center;
-  .headerlogo_img {
+  &_img {
     margin: 0;
   }
 }
-.headerdesktop{
-    @media (min-width:1100px){
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr;
-    }
-  }
   .headerreservationloca {
     display: flex;
     flex-direction: column;
@@ -312,16 +305,6 @@
     }
   }
  
-  .nouveau{ 
-    margin:1rem;
-    padding:0.5rem 1rem;
-    position:absolute;
-    z-index:2;
-    top:0;
-    right:0;
-    color:$dark-color-green;
-    background-color:$color-green;
-  }
 
 
  
