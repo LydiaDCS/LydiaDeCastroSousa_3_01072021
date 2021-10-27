@@ -82,14 +82,14 @@ font-size:20px;
    justify-content: space-between;
    align-items:baseline;
    cursor:pointer;
-   font-size:15px;
+   font-size:16px;
 }  
-&_desctiltle{
-    justify-items:flex-start;
-       }
-&_descprice{
-    justify-items:flex-end;
-       }
+&_desctitle{
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
 }
 /*revoir- voir le cours exemple*/
 .visible{
@@ -98,16 +98,18 @@ font-size:20px;
     flex-direction:row;
     align-items: baseline;
     &:hover + .check{
-    animation:rotate (1turn), scaleX(0.5) translate (-200%);
-    opacity:1;
+    transform: scaleX(500);
     width:100%;
+    opacity:1;
+    
     }
 }
 .check{
     background-color:$color-green;
     color:white;
-    opacity:0;
+    transition: transform 0.25s right ease-in-out;
     width:0%;
+    opacity:0;
     
 }
 /**/
