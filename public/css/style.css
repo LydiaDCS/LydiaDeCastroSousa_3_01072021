@@ -423,10 +423,10 @@ a {
 
 /*La Palette du goût*/
 .headerlogo {
+  position: relative;
   padding: 16px;
   font-family: "Shrikhand", cursif;
   text-align: center;
-  position: relative;
 }
 .headerlogo_img {
   margin: 0;
@@ -440,18 +440,40 @@ a {
 }
 
 .menurestaurantsimg {
+  position: relative;
+  z-index: 1;
+  margin-bottom: -15%;
   height: 300px;
   max-width: 100%;
   width: 100%;
 }
+@media (min-width: 500px) {
+  .menurestaurantsimg {
+    height: 450px;
+    margin-bottom: -10%;
+  }
+}
+@media (min-width: 900px) {
+  .menurestaurantsimg {
+    height: 550px;
+    margin-bottom: -10%;
+  }
+}
+@media (min-width: 1200px) {
+  .menurestaurantsimg {
+    height: 650px;
+    margin-bottom: -10%;
+  }
+}
 
 .menu {
-  overflow-x: hidden;
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   background-color: #f6f6f6;
   padding: 15px;
-  border-radius: 20px 20px 0 0;
+  border-radius: 40px 40px 0 0;
 }
 .menu_header {
   display: flex;
