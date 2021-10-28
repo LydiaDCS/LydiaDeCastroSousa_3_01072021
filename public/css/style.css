@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /*Page Accueil*/
-/*Toutes les pages*/
 @import url("https://fonts.googleapis.com/css2? family= Shrikhand & display=swap");
 @import url("https://fonts.googleapis.com/css2? family= Roboto & display=swap");
+/*Toutes les pages*/
 html,
 body {
   font-family: "Roboto", sans-serif;
@@ -26,6 +26,10 @@ a {
 
 .bold {
   font-weight: bold;
+}
+
+h1 {
+  font-family: "Shrikhand", cursif;
 }
 
 /*Page d'accueil*/
@@ -490,6 +494,7 @@ a {
   padding: 15px;
   border-radius: 40px 40px 0 0;
   /*revoir*/
+  /**/
 }
 .menu_header {
   display: flex;
@@ -499,10 +504,9 @@ a {
   font-family: "Shrikhand", cursif;
 }
 .menu_headertitle {
-  font-size: 37px;
-  font-weight: 1200;
+  font-size: 35px;
+  font-weight: 900;
   font-style: italic;
-  font-family: "Shrikhand", cursif;
 }
 .menu_headerlogo {
   font-size: 28px;
@@ -536,6 +540,11 @@ a {
   border-radius: 0rem 1.5rem 1.5rem 0rem;
   width: 15%;
   opacity: 1;
+  animation: check 330ms ease-in-out;
+  transform-origin: right;
+}
+.menu_card:hover + .check span {
+  transform: rotate(0turn);
 }
 .menu_card:hover {
   border-radius: 1.5rem 0rem 0rem 1.5rem;
@@ -543,12 +552,14 @@ a {
 .menu_cardtitle {
   margin: 0;
   font-size: 18px;
+  flex-wrap: nowrap;
 }
 .menu_desc {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
+  flex-wrap: nowrap;
   cursor: pointer;
   font-size: 16px;
 }
@@ -558,7 +569,6 @@ a {
   text-overflow: ellipsis;
 }
 
-/*revoir- voir le cours exemple*/
 .visible {
   font-size: 1rem;
   display: flex;
@@ -578,18 +588,23 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
   border-radius: 1.5rem;
-  transition: translate 50px, 0 3000ms ease-in-out;
-  animation: rot 700ms both;
+  transition: transform 500ms ease-in-out;
+  margin-right: 0;
   cursor: pointer;
 }
+.check span {
+  transform: rotate(-1turn);
+  transition: transform 300ms ease-in-out 50ms;
+}
 
-@keyframes rot {
+@keyframes check {
   0% {
-    transform: rotate 360deg;
+    width: 1%;
   }
   100% {
-    transform: rotate 0;
+    width: 15%;
   }
 }
 /**/

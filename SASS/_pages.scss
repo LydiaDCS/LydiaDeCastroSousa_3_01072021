@@ -24,10 +24,9 @@
     font-family: "Shrikhand", cursif;
 }
 &_headertitle{
-    font-size: 37px;
-    font-weight: 1200;
+    font-size: 35px;
+    font-weight: 900;
     font-style: italic;
-    font-family: "Shrikhand", cursif;
 }
 &_headerlogo{
     font-size:28px;
@@ -60,20 +59,28 @@
         border-radius:0rem 1.5rem 1.5rem 0rem;
         width:15%;
         opacity:1;  
+        animation: check 330ms ease-in-out;
+        transform-origin:right;
+        span{
+            transform:rotate(0turn);
         }
+    }
         &:hover{
             border-radius:1.5rem 0rem 0rem 1.5rem;
         }
 }
+/**/
 &_cardtitle{
     margin: 0;
     font-size:18px;
+    flex-wrap:nowrap;
 }
 &_desc{
    display:flex;
    flex-direction:row;
    justify-content: space-between;
    align-items:baseline;
+   flex-wrap:nowrap;
    cursor:pointer;
    font-size:16px;
 }  
@@ -83,7 +90,7 @@
     text-overflow:ellipsis;
 }
 }
-/*revoir- voir le cours exemple*/
+
 .visible{
     font-size:1rem;
     display: flex;
@@ -102,17 +109,22 @@
     display:flex;
     justify-content:center;
     align-items:center;
+    flex-wrap:nowrap;
     border-radius:1.5rem;
-    transition: translate (50px,0) 3000ms ease-in-out;
-    animation: rot 700ms both;
+    transition: transform 500ms ease-in-out;
+    margin-right:0;
     cursor:pointer;
+    span{
+        transform:rotate(-1turn);
+        transition:transform 300ms ease-in-out 50ms;
+    }
 }
-@keyframes rot{
+@keyframes check{
     0%{
-    transform:rotate (360deg);
+width:1%;
     }
     100%{
-    transform:rotate (0);
+width:15%;
     }
 }
 /**/
