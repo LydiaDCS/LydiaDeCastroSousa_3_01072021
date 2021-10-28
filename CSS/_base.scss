@@ -21,7 +21,7 @@ a {
   font-weight: bold;
 }
 h1{
-  font-family:"Shrikhand",cursif;
+  font-family : 'Shrikhand', cursif ;
 }
 
 /*Page d'accueil*/
@@ -44,12 +44,6 @@ h1{
 }
 
 /*Pages*/
-.arrow_back{
-  position:absolute;
-  left:0;
-  padding:1.5rem;
-  font-size:20px;
-}
 .menurestaurantsimg{
   position:relative;
   z-index: 1;
