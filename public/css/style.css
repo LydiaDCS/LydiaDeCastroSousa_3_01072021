@@ -210,7 +210,7 @@ h1 {
   box-shadow: 3px 3px 10px rgba(7, 7, 7, 0.25);
   background-image: linear-gradient(0deg, #9356DC, #FF79DA);
   transform: scale(1);
-  transition: all 0.25s ease-in-out;
+  transition: all 200ms ease-in-out;
   display: inline-block;
 }
 .headerreservationtexte_bouton:hover {
@@ -462,12 +462,21 @@ h1 {
   margin-top: 20px;
   margin-right: 20px;
   margin-bottom: 25px;
+  background-color: #fff;
   cursor: pointer;
+  z-index: 1;
+  position: relative;
 }
-.restaurants_logo:hover {
-  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
-  cursor: pointer;
+.restaurants_logo:hover::after {
+  opacity: 1;
   background-clip: text;
+}
+.restaurants_logo::after {
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+  z-index: -1;
+  transition: opacity 250ms;
 }
 
 /*La Palette du goût*/
@@ -540,7 +549,7 @@ h1 {
 }
 .menu_card:hover + .check {
   border-radius: 0rem 1.5rem 1.5rem 0rem;
-  width: 15%;
+  width: 70px;
   opacity: 1;
   animation: check 330ms ease-in-out;
   transform-origin: right;
@@ -554,7 +563,9 @@ h1 {
 .menu_cardtitle {
   margin: 0;
   font-size: 18px;
-  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu_desc {
   display: flex;
@@ -569,15 +580,6 @@ h1 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-.visible {
-  font-size: 1rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-bottom: 15px;
-  cursor: pointer;
 }
 
 .check {
@@ -610,51 +612,53 @@ h1 {
     width: 15%;
   }
 }
-/**/
-/*revoir*/
-.menu_card {
-  animation: app 700ms both;
-  transform-origin: top;
+.visible {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 15px;
+  cursor: pointer;
+  animation: app 3000ms both;
   opacity: 0;
 }
-.menu_card--1 {
-  animation-delay: 150ms;
+.visible--1 {
+  animation-delay: 200ms;
 }
-.menu_card--2 {
-  animation-delay: 300ms;
+.visible--2 {
+  animation-delay: 400ms;
 }
-.menu_card--3 {
-  animation-delay: 450ms;
-}
-.menu_card--4 {
+.visible--3 {
   animation-delay: 600ms;
 }
-.menu_card--5 {
-  animation-delay: 750ms;
+.visible--4 {
+  animation-delay: 800ms;
 }
-.menu_card--6 {
-  animation-delay: 900ms;
+.visible--5 {
+  animation-delay: 1000ms;
 }
-.menu_card--7 {
-  animation-delay: 1050ms;
-}
-.menu_card--8 {
+.visible--6 {
   animation-delay: 1200ms;
 }
-.menu_card--9 {
-  animation-delay: 1350ms;
+.visible--7 {
+  animation-delay: 1400ms;
+}
+.visible--8 {
+  animation-delay: 1600ms;
+}
+.visible--9 {
+  animation-delay: 1800ms;
 }
 
 @keyframes app {
   0% {
-    transform: scaley(0) translatey(-30%);
+    transform: scaley(1) translatey(30%);
   }
   to {
     transform: scaley(1) translatey(0);
     opacity: 1;
   }
 }
-/**/
 .bouton {
   display: flex;
   justify-content: center;
