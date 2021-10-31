@@ -49,7 +49,7 @@
     padding-left:0;
     width:45px;
     margin-bottom:20px;
-}/*revoir*/
+}/*revoir version mobile*/
 &_card{
     background-color:$color-white;
     padding: 0.8rem;
@@ -118,6 +118,16 @@
         transform:rotate(0turn);
         transition:transform 300ms ease-in-out 50ms;
     }
+    &:hover{
+        width:70px;
+        opacity:1;
+        border-radius:0rem 1.5rem 1.5rem 0rem;
+        animation: check 330ms ease-in-out;
+        transform-origin:right;
+        span{
+            transform:rotate(1turn);
+        }
+    }
 }
 @keyframes check{
     0%{
@@ -135,38 +145,39 @@ width:15%;
     align-items: center;
     margin-bottom:15px;
     cursor:pointer;
-    animation:app 3000ms both;
+    animation:app 3000ms both 500ms;
+    transform-origin:top;
     opacity:0;
     &--1{
-        animation-delay:200ms;
+        animation-duration:500ms;
     }
     &--2{
-        animation-delay:400ms;
+        animation-duration:1000ms;
     }
     &--3{
-        animation-delay:600ms;
+        animation-duration:1500ms;
     }
     &--4{
-        animation-delay:800ms;
+        animation-duration:2000ms;
     }
     &--5{
-        animation-delay:1000ms;
+        animation-duration:2500ms;
     }
     &--6{
-        animation-delay:1200ms;
+        animation-duration:3000ms;
     }
     &--7{
-        animation-delay:1400ms;
+        animation-duration:3500ms;
     }
     &--8{
-        animation-delay:1600ms;
+        animation-duration:3500ms;
     }
     &--9{
-        animation-delay:1800ms;
+        animation-duration:4000ms;
     }
 }
 @keyframes app{
-    0%{
+    from{
     transform :scaley(1) translatey(30%);
     }
     to{
