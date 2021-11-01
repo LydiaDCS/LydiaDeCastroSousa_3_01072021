@@ -49,7 +49,7 @@
     padding-left:0;
     width:45px;
     margin-bottom:20px;
-}/*revoir version mobile*/
+}
 &_card{
     background-color:$color-white;
     padding: 0.8rem;
@@ -70,11 +70,96 @@
             transform:rotate(1turn);
         }
     }
-        &:hover{
-            border-radius:1.5rem 0rem 0rem 1.5rem;
-        }
 }
-/**/
+.check{
+    background-color:$color-green;
+    color:white;
+    height:65px;
+    font-size:22px;
+    width:0%;
+    opacity:0; 
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:nowrap;
+    border-radius:1.5rem;
+    transition: transform 500ms cubic-bezier(.32,0,.07,1);;
+    margin-right:0;
+    cursor:pointer;
+    z-index:2;
+    margin-left:-15px;
+    
+    span{
+        display:block;
+        transform:rotate(0turn);
+        transition:transform 300ms ease-in-out 50ms;
+    }
+    &:hover{
+        width:70px;
+        opacity:1;
+        border-radius:0rem 1.5rem 1.5rem 0rem;
+        animation: check 330ms ease-in-out;
+        transform-origin:right;
+        span{
+            transform:rotate(1turn);
+        }
+    }
+}
+@keyframes check{
+    0%{
+width:3%;
+    }
+    100%{
+width:15%;
+    }
+}
+&_allcard{
+    font-size:1rem;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    margin-bottom:15px;
+    cursor:pointer;
+    animation:app 2000ms both 800ms;
+    transform-origin:top;
+    opacity:0;
+    &--1{
+        animation-delay:500ms;
+    }
+    &--2{
+        animation-delay:1000ms;
+    }
+    &--3{
+        animation-delay:1500ms;
+    }
+    &--4{
+        animation-delay:2000ms;
+    }
+    &--5{
+        animation-delay:2500ms;
+    }
+    &--6{
+        animation-delay:3000ms;
+    }
+    &--7{
+        animation-delay:3500ms;
+    }
+    &--8{
+        animation-delay:4000ms;
+    }
+    &--9{
+        animation-delay:4500ms;
+    }
+}
+@keyframes app{
+    from{
+    transform :scaley(1) translatey(30%);
+    }
+    to{
+    transform :scaley(1) translatey(0);
+    opacity:1;
+    }
+}
 &_cardtitle{
     margin: 0;
     font-size:18px;
@@ -96,94 +181,9 @@
     overflow:hidden;
     text-overflow:ellipsis;
 }
+&_descprice{
+    margin-right:10px;
 }
-
-.check{
-    background-color:$color-green;
-    color:white;
-    height:65px;
-    font-size:22px;
-    width:0%;
-    opacity:0; 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-wrap:nowrap;
-    border-radius:1.5rem;
-    transition: transform 500ms cubic-bezier(.32,0,.07,1);;
-    margin-right:0;
-    cursor:pointer;
-    span{
-        display:block;
-        transform:rotate(0turn);
-        transition:transform 300ms ease-in-out 50ms;
-    }
-    &:hover{
-        width:70px;
-        opacity:1;
-        border-radius:0rem 1.5rem 1.5rem 0rem;
-        animation: check 330ms ease-in-out;
-        transform-origin:right;
-        span{
-            transform:rotate(1turn);
-        }
-    }
-}
-@keyframes check{
-    0%{
-width:1%;
-    }
-    100%{
-width:15%;
-    }
-}
-
-.visible{
-    font-size:1rem;
-    display: flex;
-    flex-direction:row;
-    align-items: center;
-    margin-bottom:15px;
-    cursor:pointer;
-    animation:app 3000ms both 500ms;
-    transform-origin:top;
-    opacity:0;
-    &--1{
-        animation-duration:500ms;
-    }
-    &--2{
-        animation-duration:1000ms;
-    }
-    &--3{
-        animation-duration:1500ms;
-    }
-    &--4{
-        animation-duration:2000ms;
-    }
-    &--5{
-        animation-duration:2500ms;
-    }
-    &--6{
-        animation-duration:3000ms;
-    }
-    &--7{
-        animation-duration:3500ms;
-    }
-    &--8{
-        animation-duration:3500ms;
-    }
-    &--9{
-        animation-duration:4000ms;
-    }
-}
-@keyframes app{
-    from{
-    transform :scaley(1) translatey(30%);
-    }
-    to{
-    transform :scaley(1) translatey(0);
-    opacity:1;
-    }
 }
 .bouton{
     display:flex;

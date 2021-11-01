@@ -504,8 +504,6 @@ h1 {
   background-color: #f6f6f6;
   padding: 15px;
   border-radius: 40px 40px 0 0;
-  /*revoir version mobile*/
-  /**/
 }
 .menu_header {
   display: flex;
@@ -557,8 +555,93 @@ h1 {
 .menu_card:hover + .check span {
   transform: rotate(1turn);
 }
-.menu_card:hover {
-  border-radius: 1.5rem 0rem 0rem 1.5rem;
+.menu .check {
+  background-color: #99E2D0;
+  color: white;
+  height: 65px;
+  font-size: 22px;
+  width: 0%;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  border-radius: 1.5rem;
+  transition: transform 500ms cubic-bezier(0.32, 0, 0.07, 1);
+  margin-right: 0;
+  cursor: pointer;
+  z-index: 2;
+  margin-left: -15px;
+}
+.menu .check span {
+  display: block;
+  transform: rotate(0turn);
+  transition: transform 300ms ease-in-out 50ms;
+}
+.menu .check:hover {
+  width: 70px;
+  opacity: 1;
+  border-radius: 0rem 1.5rem 1.5rem 0rem;
+  animation: check 330ms ease-in-out;
+  transform-origin: right;
+}
+.menu .check:hover span {
+  transform: rotate(1turn);
+}
+@keyframes check {
+  0% {
+    width: 3%;
+  }
+  100% {
+    width: 15%;
+  }
+}
+.menu_allcard {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 15px;
+  cursor: pointer;
+  animation: app 2000ms both 800ms;
+  transform-origin: top;
+  opacity: 0;
+}
+.menu_allcard--1 {
+  animation-delay: 500ms;
+}
+.menu_allcard--2 {
+  animation-delay: 1000ms;
+}
+.menu_allcard--3 {
+  animation-delay: 1500ms;
+}
+.menu_allcard--4 {
+  animation-delay: 2000ms;
+}
+.menu_allcard--5 {
+  animation-delay: 2500ms;
+}
+.menu_allcard--6 {
+  animation-delay: 3000ms;
+}
+.menu_allcard--7 {
+  animation-delay: 3500ms;
+}
+.menu_allcard--8 {
+  animation-delay: 4000ms;
+}
+.menu_allcard--9 {
+  animation-delay: 4500ms;
+}
+@keyframes app {
+  from {
+    transform: scaley(1) translatey(30%);
+  }
+  to {
+    transform: scaley(1) translatey(0);
+    opacity: 1;
+  }
 }
 .menu_cardtitle {
   margin: 0;
@@ -581,95 +664,10 @@ h1 {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
-.check {
-  background-color: #99E2D0;
-  color: white;
-  height: 65px;
-  font-size: 22px;
-  width: 0%;
-  opacity: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-  border-radius: 1.5rem;
-  transition: transform 500ms cubic-bezier(0.32, 0, 0.07, 1);
-  margin-right: 0;
-  cursor: pointer;
-}
-.check span {
-  display: block;
-  transform: rotate(0turn);
-  transition: transform 300ms ease-in-out 50ms;
-}
-.check:hover {
-  width: 70px;
-  opacity: 1;
-  border-radius: 0rem 1.5rem 1.5rem 0rem;
-  animation: check 330ms ease-in-out;
-  transform-origin: right;
-}
-.check:hover span {
-  transform: rotate(1turn);
+.menu_descprice {
+  margin-right: 10px;
 }
 
-@keyframes check {
-  0% {
-    width: 1%;
-  }
-  100% {
-    width: 15%;
-  }
-}
-.visible {
-  font-size: 1rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-bottom: 15px;
-  cursor: pointer;
-  animation: app 3000ms both 500ms;
-  transform-origin: top;
-  opacity: 0;
-}
-.visible--1 {
-  animation-duration: 500ms;
-}
-.visible--2 {
-  animation-duration: 1000ms;
-}
-.visible--3 {
-  animation-duration: 1500ms;
-}
-.visible--4 {
-  animation-duration: 2000ms;
-}
-.visible--5 {
-  animation-duration: 2500ms;
-}
-.visible--6 {
-  animation-duration: 3000ms;
-}
-.visible--7 {
-  animation-duration: 3500ms;
-}
-.visible--8 {
-  animation-duration: 3500ms;
-}
-.visible--9 {
-  animation-duration: 4000ms;
-}
-
-@keyframes app {
-  from {
-    transform: scaley(1) translatey(30%);
-  }
-  to {
-    transform: scaley(1) translatey(0);
-    opacity: 1;
-  }
-}
 .bouton {
   display: flex;
   justify-content: center;
