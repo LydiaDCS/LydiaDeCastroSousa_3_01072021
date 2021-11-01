@@ -41,6 +41,15 @@ h1{
   right:0;
   color:$dark-color-green;
   background-color:$color-green;
+  animation: nouv 1500ms infinite;
+}
+@keyframes nouv{
+  from{
+    transform:rotatex(0turn);
+  }
+  to{
+    transform:rotatex(1turn);
+  }
 }
 
 /*Pages*/

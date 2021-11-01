@@ -1,3 +1,26 @@
+/*revoir*/
+.load{
+  height:100%;
+  width:100%;
+  font-size:50px;
+  animation: load 500ms both 1000ms;
+  background-color:$color-primary-light;
+  &_logo{
+      color:$color-white;
+      height:100%;
+  }
+}
+@keyframes load{
+  0%{
+  width:0%;
+  }
+  50%{
+  width:0%;    
+  }
+  100%{
+  width:100%;
+  }
+}
 .headerlogo {
   text-align: center;
   padding: 16px;
