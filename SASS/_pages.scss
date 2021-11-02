@@ -1,31 +1,10 @@
-.load{
-    height:100%;
-    width:100%;
-    font-size:50px;
-    animation: load 500ms both 1000ms;
-    background-color:$color-primary-light;
-    &_logo{
-        color:$color-white;
-        height:100%;
-    }
-}
-@keyframes load{
-    0%{
-    width:0%;
-    }
-    50%{
-    width:0%;    
-    }
-    100%{
-    width:100%;
-    }
-}
 .headerlogo {
     background-color:$color-white;
     position:relative;
     padding: 16px;
     font-family: "Shrikhand", cursif;
     text-align:center;
+    z-index:2;
     &_arrowback{
         position:absolute;
         left:0;
