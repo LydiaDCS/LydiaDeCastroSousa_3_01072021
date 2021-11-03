@@ -28,12 +28,11 @@
     flex-direction: row;
     align-items: baseline;
     justify-content:space-between;
-    font-family: "Shrikhand", cursif;
 }
 &_headertitle{
-    font-size: 35px;
-    font-weight: 900;
-    font-style: italic;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: "Shrikhand", sans-serif;
 }
 &_headerlogo{
     font-size:28px;
