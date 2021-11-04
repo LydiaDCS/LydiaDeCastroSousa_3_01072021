@@ -64,6 +64,7 @@
       padding-right: 30px;
       @media (min-width:1100px){
       font-size: $title-font-size;
+      font-weight:bold;
       }
     }
   }
@@ -79,6 +80,7 @@
     &_byline {
       margin-bottom: 40px;
       font-size: 16px;
+      color:#525252;
       @media (min-width: 1100px) {
         font-size: $font-size;
         margin-bottom: 60px;
@@ -117,15 +119,14 @@
   
   /*Fonctionnement*/
   .fonctionnement {
-    padding: 3rem 1.5rem;
+    padding: 3rem $padding-section;
     background-color: $color-white;
     &_title {
       margin-top: 0;
       margin-bottom: 30px;
       @media (min-width: 1100px) {
         background-color: $gray;
-        font-size: $title-font-size;
-        padding: 22px 0px;
+        padding: 21px 0px;
         margin-bottom: 0;
         @include inset-shadow;
         width: 100%;
@@ -217,7 +218,7 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    padding: 25px 16px;
+    padding: $padding-section;
     &_container {
       @media (min-width: 1100px) {
         display: grid;
@@ -309,10 +310,7 @@
       flex-direction: column;
       align-items: flex-start;
     }
-    &_heading {
-      margin: 1rem 1.5rem 0rem 1rem;
-      font-size: 100%;
-    }
+
     &_byline {
       margin:0.4rem 1.5rem 1rem 1rem ;
       font-size: 100%;
