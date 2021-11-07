@@ -72,26 +72,26 @@
 &_title{
     padding:map-get($sizes,padding); 
     text-transform: uppercase;
-    border-bottom:solid 3.5px $color-tertiary;
-    padding-bottom:5px;
+    border-bottom:solid $border-bottom-size $color-tertiary;
+    padding-bottom:$little-padding;
     padding-left:0;
-    width:45px;
+    width:$header-border;
     margin-bottom:map-get($sizes,margin);
 }
 &_card{
     background-color:$color-white;
-    padding:0.3rem 0.8rem;
-    padding-top:5px;
+    padding:$padding-card;
+    padding-top:$little-padding;
     width:100%;
-    height:71px;
-    border-radius: 1.3rem;
-    box-shadow: 0.25rem 0.25rem 0.5rem rgba(136, 136, 136, 0.25);
+    height:$height-card;
+    border-radius:$border-radius-card;
+    box-shadow: $box-shadow-card;
     position: relative;
 }
 .check{
     background-color:$color-tertiary;
     color:white;
-    height:71px;
+    height:$height-check;
     font-size:$bigger-font-size;
     width:0%; 
     overflow:hidden;
@@ -99,7 +99,7 @@
     justify-content:center;
     align-items:center;
     flex-wrap:nowrap;
-    border-radius:1.3rem;
+    border-radius:$border-radius-check;
     margin-right:0;
     cursor:pointer;
     z-index:2;
@@ -109,9 +109,9 @@
         transition:transform 300ms ease-in-out 50ms;
     }
     &:hover{
-        width:15%;
-        max-width:15%;
-        border-radius:0rem 1.5rem 1.5rem 0rem;
+        width:$check-width;
+        max-width:$check-width;
+        border-radius:$border-radius-check-hover;
         animation: slide 430ms linear backwards;
         span{
             transform:rotate(1turn);
@@ -123,7 +123,7 @@
 width:0%;
     }
     50%{
-width:15%;
+width:$check-width;
     }
 }
 &_allcard{
@@ -131,7 +131,7 @@ width:15%;
     display: flex;
     flex-direction:row;
     align-items: center;
-    margin-bottom:15px;
+    margin-bottom:$margin-cards;
     cursor:pointer;
     animation:app 2000ms both 800ms;
     transform-origin:top;
@@ -165,12 +165,12 @@ width:15%;
     }
     &:hover{
         .menu_card{
-            border-radius: 1.5rem 0rem 0rem 1.5rem;
+            border-radius: $border-radius-allcards;
             cursor:pointer;
             z-index:1;
             &:hover + .check{
-                border-radius:0rem 1.5rem 1.5rem 0rem;
-                width:15%;
+                border-radius:$border-radius-check-hover;
+                width:$check-width;
                 opacity:1;  
                 animation: slide 430ms linear backwards;
                 transform-origin:right;
@@ -192,7 +192,7 @@ width:15%;
 }
 &_cardtitle{
     margin: 0;
-    font-size:18px;
+    font-size:$card-tittle;
     white-space:nowrap;
     overflow:hidden;
     text-overflow:ellipsis;
@@ -204,17 +204,17 @@ width:15%;
    align-items:baseline;
    flex-wrap:nowrap;
    cursor:pointer;
-   font-size:15.5px;
-   padding-bottom:5px;
+   font-size:$desc-size;
+   padding-bottom:$little-padding;
 }  
 &_desctitle{
     white-space:nowrap;
     overflow:hidden;
     text-overflow:ellipsis;
-    padding-top:5px;
+    padding-top:$little-padding;
 }
 &_descprice{
-    margin-right:10px;
+    margin-right:$margin-part;
     font-weight:bold;
 }
 }
@@ -238,7 +238,6 @@ width:15%;
         }
         &:hover{
             background-image: linear-gradient(0deg, $color-primary-light, $color-secondary-light);
-            transform:scale(1.03);
             box-shadow:$box-shadow-bouton-hover;
         } 
 }
