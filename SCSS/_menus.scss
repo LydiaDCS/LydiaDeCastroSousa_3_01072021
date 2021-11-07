@@ -1,39 +1,15 @@
-.load{
-    height:100%;
-    width:100%;
-    font-size:50px;
-    animation: load 500ms both 1000ms;
-    background-color:$color-primary-light;
-    background-image:url"images/logo/ohmyfood@2x";
-    &_logo{
-        color:$color-white;
-        height:100%;
-    }
-  }
-  @keyframes load{
-    0%{
-    width:0%;
-    }
-    50%{
-    width:0%;    
-    }
-    100%{
-    width:100%;
-    }
-  }
-  /**/
 .headerlogo {
     background-color:$color-white;
     position:relative;
-    padding: 16px;
+    padding: map-get($sizes,padding);
     font-family: "Shrikhand", cursif;
     text-align:center;
     z-index:2;
     &_arrowback{
         position:absolute;
         left:0;
-        padding:1.5rem;
-        font-size:20px;
+        padding:$padding-section;
+        font-size:map-get($sizes,margin);
     }
     &_img {
       margin: 0;
@@ -42,23 +18,23 @@
 .menurestaurantsimg{
     position:relative;
     z-index: 1;
-    margin-bottom:-15%;
+    margin-bottom:$margin-img;
     height: 300px;
     width: 100%; 
     object-fit:cover;
     @media (min-width:500px){
     height: 550px;
-    margin-bottom:-10%;
+    margin-bottom:$margin-img;
     }
     @media (min-width:900px){
-    margin-top:-15%;
+    margin-top:$margin-img;
     height: 750px;
-    margin-bottom:-10%;
+    margin-bottom:$margin-img;
     }
     @media (min-width:1200px){
     height: 1000px;
-    margin-top:-20%;
-    margin-bottom:-15%;
+    margin-top:$margin-img;
+    margin-bottom:$margin-img;
     }
 }
 .menu{
@@ -67,8 +43,8 @@
     display: flex;
     flex-direction:column;
     background-color:$background-color; 
-    padding:15px;
-    border-radius:40px 40px 0 0;
+    padding:$padding-section;
+    border-radius:$border-radius-menu;
 &_header{
     display:flex;
     flex-direction: row;
@@ -76,16 +52,15 @@
     justify-content:space-between;
 }/*revoir*/
 &_headerlogo{
-    font-size:28px;
-    padding:0px 10px;
-    transition: transform 0.8 all;
-    transform:scale(1);
+    font-size:$font-size-heart;
+    padding:0px $padding-logo-header;
+    transition: transform 80s all;
+    background-clip:text;
     &:hover{
         &::before{
-        @include dégradé;
+        @include degrade;
         opacity:1;
         transform:scale(1);
-        background-clip:text;
         }
     }
 }
@@ -95,67 +70,64 @@
     justify-content:center;
 }
 &_title{
-    padding:0.8rem;
+    padding:map-get($sizes,padding); 
     text-transform: uppercase;
-    border-bottom:solid 3.5px $color-green;
+    border-bottom:solid 3.5px $color-tertiary;
     padding-bottom:5px;
     padding-left:0;
     width:45px;
-    margin-bottom:20px;
+    margin-bottom:map-get($sizes,margin);
 }
 &_card{
     background-color:$color-white;
     padding:0.3rem 0.8rem;
     padding-top:5px;
     width:100%;
+    height:71px;
     border-radius: 1.3rem;
     box-shadow: 0.25rem 0.25rem 0.5rem rgba(136, 136, 136, 0.25);
     position: relative;
 }
 .check{
-    background-color:$color-green;
+    background-color:$color-tertiary;
     color:white;
     height:71px;
-    font-size:22px;
-    width:0%;
-    opacity:0; 
+    font-size:$bigger-font-size;
+    width:0%; 
+    overflow:hidden;
     display:flex;
     justify-content:center;
     align-items:center;
     flex-wrap:nowrap;
     border-radius:1.3rem;
-    transition: transform 500ms linear;
     margin-right:0;
     cursor:pointer;
     z-index:2;
-    transform:scaleX(1);
-    
     span{
         display:block;
         transform:rotate(0turn);
         transition:transform 300ms ease-in-out 50ms;
     }
     &:hover{
-        width:70px;
-        opacity:1;
+        width:15%;
+        max-width:15%;
         border-radius:0rem 1.5rem 1.5rem 0rem;
-        animation: check 330ms ease-in-out;
-        transform:scaleX(0) right;
+        animation: slide 430ms linear backwards;
         span{
             transform:rotate(1turn);
         }
     }
 }
-@keyframes check{
+@keyframes slide{
     0%{
-width:3%;
+width:0%;
     }
-    100%{
+    50%{
 width:15%;
     }
 }
 &_allcard{
-    font-size:1rem;
+    font-size:map-get($sizes,padding);
     display: flex;
     flex-direction:row;
     align-items: center;
@@ -195,13 +167,12 @@ width:15%;
         .menu_card{
             border-radius: 1.5rem 0rem 0rem 1.5rem;
             cursor:pointer;
-            transform:scaleX(1);
             z-index:1;
             &:hover + .check{
                 border-radius:0rem 1.5rem 1.5rem 0rem;
-                width:70px;
+                width:15%;
                 opacity:1;  
-                animation: check 330ms ease-in-out;
+                animation: slide 430ms linear backwards;
                 transform-origin:right;
                     span{
                         transform:rotate(1turn);
@@ -250,29 +221,31 @@ width:15%;
 .bouton{
     display:flex;
     justify-content:center;
+    margin:$margin-bouton;
 &_container{
     text-align:center;
     border: 0;
-    padding: 1rem;
-    font-weight: 540;
-    width:210px;
-    border-radius: 50px;
+    padding: $padding-bouton-menu;
+    font-weight:$font-weight-bouton;
+    font-size:$font-size-bouton;
+    border-radius: $border-radius-bouton;
     cursor: pointer;
-    box-shadow: 3px 3px 10px rgba(7, 7, 7, 0.25);
-    transition: all 0.25s ease-in-out;
-    @include dégradé;
-    margin: 20px;
+    box-shadow: $box-shadow-bouton;
+    transition: all 250ms ease-in-out;
+    @include degrade;
     @media (min-width: 1100px) {
         font-size: $font-size;
         }
         &:hover{
             background-image: linear-gradient(0deg, $color-primary-light, $color-secondary-light);
             transform:scale(1.03);
-            box-shadow: 5px 5px 10px rgba(7, 7, 7, 0.4);
+            box-shadow:$box-shadow-bouton-hover;
         } 
 }
     &_reservation{
-        color:$color-white;    }     
+        color:$color-white;
+
+    }    
 }
 
 

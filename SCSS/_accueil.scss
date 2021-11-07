@@ -1,15 +1,9 @@
-
 /*revoir*/
-.load{
+.loader{
   height:100%;
   width:100%;
-  font-size:50px;
-  animation: load 500ms both 1000ms;
+  animation: load 400ms linear;
   background-color:$color-primary-light;
-  &_logo{
-      color:$color-white;
-      height:100%;
-  }
 }
 @keyframes load{
   0%{
@@ -24,7 +18,7 @@
 }
 .headerlogo {
   text-align: center;
-  padding: 16px;
+  padding: map-get($sizes,padding);
   position: relative;
   font-family: "Shrikhand", cursif;
   display:flex;
@@ -45,18 +39,18 @@
       justify-content: center;
       align-items: baseline;
       background-color: $gray;
-      padding: 27.5px 0px;
+      padding: $padding-herderreservation;
       width: 100%;
       @include inset-shadow;
       @media (max-width:1100px){
-        padding:22px 0px;
+        padding:$padding-herderreservation-mobile;
       }
     }
     &_logo {
-      margin-right: 15px;
+      margin-right: $margin-logo;
       font-size: $font-size;
       @media (min-width: 1100px) {
-        font-size: $title-font-size;
+        font-size: $bigger-font-size;
         height: 100%;
         max-height: 100%;
       }
@@ -64,71 +58,69 @@
     &_texte {
       margin: 0;
       font-size:$font-size;
-      padding-right: 30px;
+      padding-right: $padding-section;
       @media (min-width:1100px){
-      font-size: $title-font-size;
+      font-size: $bigger-font-size;
       font-weight:bold;
       }
     }
   }
   .headerreservationtexte {
     background-color: $light-gray;
-    padding: 45px;
-    padding-bottom:65px;
+    padding: $padding-herderreservation-texte;
+    padding-bottom:$padding-herderreservation-texte;
     &_title {
       margin: 0;
-      font-size: $title-font-size;
+      font-size: $bigger-font-size;
     }
     &_byline {
-      margin-bottom: 40px;
-      font-size: 16px;
-      color:#525252;
+      margin-bottom:$margin-herderreservation-texte-byline;
+      
+      color:$dark-gray;
       @media (min-width: 1100px) {
         font-size: $font-size;
-        margin-bottom: 60px;
+        margin-bottom: $margin-herderreservation-texte-byline*1.5;
       }
     }
     &_bouton {
       border: 0;
-      padding: 0.9rem 1.5rem;
-      font-weight: 500;
-      font-size: 1.1rem;
-      border-radius: 50px;
+      padding: $padding-bouton;
+      font-weight: $font-weight-bouton;
+      font-size: $font-size-bouton;
+      border-radius: $border-radius-bouton;
       color: $color-white;
       cursor: pointer;
-      box-shadow: 3px 3px 10px rgba(7, 7, 7, 0.25);
-      @include dégradé;
+      box-shadow: $box-shadow-bouton;
+      @include degrade;
       transform:scale(1);
-      transition: all 200ms ease-in-out;
+      transition: all 250ms ease-in-out;
       display: inline-block;
         &:hover{
           background-image: linear-gradient(0deg, $color-primary-light, $color-secondary-light) ;
           transform: scale(1.02);
-          box-shadow: 5px 5px 10px rgba(7, 7, 7, 0.4);
+          box-shadow: $box-shadow-bouton-hover;
         }
         @media (min-width: 1100px) {
           font-size: $font-size;
         }
     }
-
     @media (min-width: 1100px) {
       @include inset-shadow;
       height: 100%;
       max-height: 100%;
-      padding: 60px;
     }
   }
   
   /*Fonctionnement*/
   .fonctionnement {
-    padding: 3rem $padding-section;
+    padding: $padding-fonctionnement;
     background-color: $color-white;
     &_title {
       margin-top: 0;
-      margin-bottom: 30px;
+      margin-bottom: $margin-fonctionnement;
       @media (min-width: 1100px) {
         background-color: $gray;
-        padding: 21px 0px;
+        padding: $padding-fonctionnement-title;
         margin-bottom: 0;
         @include inset-shadow;
         width: 100%;
@@ -143,8 +135,8 @@
       @media (min-width: 1100px) {
         @include inset-shadow;
         justify-content: space-evenly;
-        padding: 30px 15%;
-        row-gap: 1rem;
+        padding: $padding-step;
+        row-gap: map-get($sizes,padding);
       }
     }
     &_part {
@@ -153,12 +145,12 @@
       justify-content: start;
       align-items: baseline;
       font-weight: bold;
-      font-size: 16px;
+      font-size: map-get($sizes,padding);;
       transition: all 0.25s;
       background-color:$background-color;
-      padding: 1.5rem;
-      border-radius: 1.5rem;
-      box-shadow: 0.25rem 0.25rem 0.5rem rgba(136, 136, 136, 0.25);
+      padding: $padding-part;
+      border-radius: $border-radius-part;
+      box-shadow: $box-shadow-part;
       position: relative;
       &:hover {
         cursor: pointer;
@@ -173,29 +165,29 @@
       }
     }
     &_part:nth-child(1) {
-      margin-bottom: 10px;
+      margin-bottom: $margin-part;
     }
     &_part:nth-child(2) {
-      margin: 10px 0px;
+      margin: $margin-part 0px;
     }
     &_part:nth-child(3) {
-      margin-top: 10px;
+      margin-top: $margin-part;
     }
     &_number {
-      padding: 8px 12px;
+      padding: $padding-number;
       background-color: $color-primary;
       color: $color-white;
-      border-radius: 50%;
+      border-radius: $border-radius-number;
       position: absolute;
       left: -1rem;
-      bottom: 1rem;
-      font-size: 15px;
+      bottom: map-get($sizes,padding);
+      font-size: $size-number;
     }
     &_logo {
-      padding-left: 1.5rem;
-      margin-right: 20px;
+      padding-left: $padding-part;
+      margin-right:map-get($sizes,margin);
       color: $shadows-color;
-      font-size: 1.1rem;
+      font-size: $font-size-bouton;
     }
     @media (min-width: 1100px) {
       padding: 0;
@@ -209,11 +201,46 @@
       }
     }
   }
+  .headerdesktop{
+    @media (min-width:1100px){
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+  }
+  .nouveau{ 
+    margin:map-get($sizes,padding);;
+    padding:0.5rem map-get($sizes,padding);
+    position:absolute;
+    z-index:2;
+    top:0;
+    right:0;
+    color:$dark-color-tertiary;
+    background-color:$color-tertiary;
+    animation: nouv 1500ms infinite;
+  }
+  @keyframes nouv{
+    from{
+      transform:rotatex(0turn);
+    }
+    to{
+      transform:rotatex(1turn);
+    }
+  }
+  
+  .menudesktop{
+    @media (min-width:1100px){
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap:map-get($sizes,padding)*2;
+        align-items: baseline;
+    }
+  }
   /*section restaurants*/
   .restaurants {
     display: grid;
-    column-gap: 2rem;
-    row-gap: 2rem;
+    column-gap: $gap;
+    row-gap: $gap;
     background-color: $background-color;
     border-radius: 0;
     margin: 0;
@@ -226,20 +253,20 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 1fr;
-        column-gap: 2rem;
+        column-gap: $gap;
       }
       @media (max-width: 1100px) {
         grid-template-columns: 1fr;
         grid-template-rows: auto repeat(4, 1fr) auto;
-        row-gap: 1rem;
+        row-gap: map-get($sizes,padding);
       }
     }
     &_title {
       grid-column: 1/-1;
-      padding: 1rem 0rem;
-      margin: 10px 0px;
+      padding: map-get($sizes,padding) 0rem;
+      margin: $margin-part 0px;
       @media (min-width: 1100px) {
-        padding-top: 30px;
+        padding-top: $margin-part;
       }
       @media (max-width: 1100px) {
         grid-column: 1/-1;
@@ -247,22 +274,22 @@
       }
     }
     &_card {
-      box-shadow: 0 0 20px #0000002e;
-      border-radius: 1.5rem;
+      box-shadow: 0 0 map-get($sizes,margin) #0000002e;
+      border-radius: $border-radius-part;
       overflow: hidden;
       display: flex;
       flex-direction: column;
       align-items: stretch;
-      height: 17rem;
+      height: $size-card-mobile;
       transition-duration: 0.1s;
       margin-right: 0px;
       margin-left: 0px;
-      margin-bottom: 20px;
+      margin-bottom:map-get($sizes,margin);
       &:hover {
         transform: scale(1.02);
       }
       @media (min-width: 1100px) {
-        height: 400px;
+        height: $size-card;
         width: 100%;
       }
     }
@@ -311,11 +338,11 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      padding:5px 15px;
+      padding:$card-decs;
     }
 
     &_byline {
-      margin:0.4rem 1.5rem 1rem 0rem ;
+      margin:$margin-byline;
       font-size: 100%;
     }
     @media (min-width: 1100px) {
@@ -323,27 +350,21 @@
     }
     /* revoir*/
 &_logo {
-      font-size: 25px;
-      margin-top:20px;
-      margin-right: 20px;  
-      margin-bottom:25px;
-      background-color:$color-white;
+      font-size: $size-heart-logo;
+      margin-top:map-get($sizes,margin);
+      margin-right: map-get($sizes,margin);  
+      margin-bottom:$margin-heart;
       cursor:pointer;
-      z-index:1;
-      position:relative;
-      &:hover{
-        &::after{
-          opacity:1;
+      transform:scale(1);
+      &::before{
+        &:hover{
+          color:transparent;
           background-clip:text;
+          background-color: linear-gradient(0deg, $color-primary, $color-secondary);
+          transition: transform all 250ms both;
+          transform:background-color;
         }
       }
-      &::after{
-        content:"";
-        position:absolute;
-        background-image: linear-gradient(0deg, $color-primary, $color-secondary);
-        z-index: -1;
-        transition: opacity 250ms;
-      }    
 }
 
 }
