@@ -1,5 +1,4 @@
-
-/*revoir*/
+/*Loader*/
 .loader{
   position:fixed;
   top:0;
@@ -31,6 +30,7 @@
   animation-duration:3000ms;
 }
 
+/*Header*/
 .headerlogo {
   text-align: center;
   padding: map-get($sizes,padding);
@@ -44,93 +44,92 @@
     margin: 0;
   }
 }
-  .headerreservationloca {
+.headerreservationloca {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  &_container {
     display: flex;
-    flex-direction: column;
-    text-align: center;
-    &_container {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: baseline;
-      background-color: $gray;
-      padding: $padding-herderreservation;
-      width: 100%;
-      @include inset-shadow;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    background-color: $gray;
+    padding: $padding-herderreservation;
+    width: 100%;
+    @include inset-shadow;
       @media (max-width:1100px){
         padding:$padding-herderreservation-mobile;
       }
-    }
-    &_logo {
-      margin-right: $margin-logo;
-      font-size: $font-size;
+  }
+  &_logo {
+    margin-right: $margin-logo;
+    font-size: $font-size;
       @media (min-width: 1100px) {
         font-size: $bigger-font-size;
         height: 100%;
         max-height: 100%;
       }
-    }
-    &_texte {
-      margin: 0;
-      font-size:$font-size;
-      padding-right: $padding-section;
+  }
+  &_texte {
+    margin: 0;
+    font-size:$font-size;
+    padding-right: $padding-section;
       @media (min-width:1100px){
       font-size: $bigger-font-size;
       font-weight:bold;
       }
-    }
   }
-  .headerreservationtexte {
-    background-color: $light-gray;
-    padding: $padding-herderreservation-texte;
-    padding-bottom:$padding-herderreservation-texte;
-    &_title {
-      margin: 0;
-      font-size: $bigger-font-size;
-    }
-    &_byline {
-      margin-bottom:$margin-herderreservation-texte-byline;
-      
-      color:$dark-gray;
+}
+.headerreservationtexte {
+  background-color: $light-gray;
+  padding: $padding-herderreservation-texte;
+  padding-bottom:$padding-herderreservation-texte;
+  &_title {
+    margin: 0;
+    font-size: $bigger-font-size;
+  }
+  &_byline {
+    margin-bottom:$margin-herderreservation-texte-byline;
+    color:$dark-gray;
       @media (min-width: 1100px) {
         font-size: $font-size;
         margin-bottom: $margin-herderreservation-texte-byline*1.5;
       }
-    }
-    &_bouton {
-      border: 0;
-      padding: $padding-bouton;
-      font-weight: $font-weight-bouton;
-      font-size: $font-size-bouton;
-      border-radius: $border-radius-bouton;
-      color: $color-white;
-      cursor: pointer;
-      box-shadow: $box-shadow-bouton;
-      @include degrade;
-      transition: all 250ms ease-in-out;
-      display: inline-block;
-        &:hover{
-          background-image: linear-gradient(0deg, $color-primary-light, $color-secondary-light) ;
-          box-shadow: $box-shadow-bouton-hover;
+  }
+  &_bouton {
+    border: 0;
+    padding: $padding-bouton;
+    font-weight: $font-weight-bouton;
+    font-size: $font-size-bouton;
+    border-radius: $border-radius-bouton;
+    color: $color-white;
+    cursor: pointer;
+    box-shadow: $box-shadow-bouton;
+    @include degrade;
+    transition: all 250ms ease-in-out;
+    display: inline-block;
+      &:hover{
+        background-image: linear-gradient(0deg, $color-primary-light, $color-secondary-light) ;
+        box-shadow: $box-shadow-bouton-hover;
+      }
+        @media (min-width: 1100px){
+        font-size: $font-size;
         }
-        @media (min-width: 1100px) {
-          font-size: $font-size;
-        }
-    }
+  }
     @media (min-width: 1100px) {
       @include inset-shadow;
       height: 100%;
       max-height: 100%;
-    }
-  }
-  
-  /*Fonctionnement*/
-  .fonctionnement {
-    padding: $padding-fonctionnement;
-    background-color: $color-white;
-    &_title {
-      margin-top: 0;
-      margin-bottom: $margin-fonctionnement;
+   }
+}
+
+/*Fonctionnement*/
+.fonctionnement {
+  padding: $padding-fonctionnement;
+  background-color: $color-white;
+  &_title {
+    margin-top: 0;
+    margin-bottom: $margin-fonctionnement;
       @media (min-width: 1100px) {
         background-color: $gray;
         padding: $padding-fonctionnement-title;
@@ -139,145 +138,149 @@
         width: 100%;
         text-align: center;
       }
-    }
-    &_step {
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
+  }
+  &_step {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
       @media (min-width: 1100px) {
         @include inset-shadow;
         justify-content: space-evenly;
         padding: $padding-step;
         row-gap: map-get($sizes,padding);
       }
-    }
-    &_part {
-      display: flex;
-      flex-direction: row;
-      justify-content: start;
-      align-items: baseline;
-      font-weight: bold;
-      font-size: map-get($sizes,padding);;
-      transition: all 0.25s;
-      background-color:$background-color;
-      padding: $padding-part;
-      border-radius: $border-radius-part;
-      box-shadow: $box-shadow-part;
-      position: relative;
-      &:hover {
-        cursor: pointer;
-        transform: scale(1.02);
-        background-color: $light-purple;
-        .fonctionnement_logo{
-          color: $color-primary;
-        }
+  }
+  &_part {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: baseline;
+    font-weight: bold;
+    font-size: map-get($sizes,padding);;
+    transition: all 0.25s;
+    background-color:$background-color;
+    padding: $padding-part;
+    border-radius: $border-radius-part;
+    box-shadow: $box-shadow-part;
+    position: relative;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.02);
+      background-color: $light-purple;
+      .fonctionnement_logo{
+        color: $color-primary;
       }
+    }
       @media (min-width: 1100px) {
         background-color: $color-white;
       }
-    }
-    &_part:nth-child(1) {
-      margin-bottom: $margin-part;
-    }
-    &_part:nth-child(2) {
-      margin: $margin-part 0px;
-    }
-    &_part:nth-child(3) {
-      margin-top: $margin-part;
-    }
-    &_number {
-      padding: $padding-number;
-      background-color: $color-primary;
-      color: $color-white;
-      border-radius: $border-radius-number;
-      position: absolute;
-      left: -1rem;
-      bottom: map-get($sizes,padding);
-      font-size: $size-number;
-    }
-    &_logo {
-      padding-left: $padding-part;
-      margin-right:map-get($sizes,margin);
-      color: $shadows-color;
-      font-size: $font-size-bouton;
-    }
+  }
+  &_part:nth-child(1) {
+    margin-bottom: $margin-part;
+  }
+  &_part:nth-child(2) {
+    margin: $margin-part 0px;
+  }
+  &_part:nth-child(3) {
+    margin-top: $margin-part;
+  }
+  &_number {
+    padding: $padding-number;
+    background-color: $color-primary;
+    color: $color-white;
+    border-radius: $border-radius-number;
+    position: absolute;
+    left: -1rem;
+    bottom: map-get($sizes,padding);
+    font-size: $size-number;
+  }
+  &_logo {
+    padding-left: $padding-part;
+    margin-right:map-get($sizes,margin);
+    color: $shadows-color;
+    font-size: $font-size-bouton;
+  }
+  &_container {
     @media (min-width: 1100px) {
-      padding: 0;
-      display: grid;
-      grid-template-columns: 1fr;
-      font-weight: bold;
-    }
-    &_container {
-      @media (min-width: 1100px) {
-        background-color:$light-gray;
-      }
+      background-color:$light-gray;
     }
   }
-  .headerdesktop{
-    @media (min-width:1100px){
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr;
-    }
-  }
-  .nouveau{ 
-    margin:map-get($sizes,padding);;
-    padding:0.5rem map-get($sizes,padding);
-    position:absolute;
-    z-index:2;
-    top:0;
-    right:0;
-    color:$dark-color-tertiary;
-    background-color:$color-tertiary;
-    animation: nouv 1500ms 4500ms alternate;
-  }
-  @keyframes nouv{
-    from{
-      transform:rotatex(0turn);
-    }
-    to{
-      transform:rotatex(1turn);
-    }
-  }
-  
-  .menudesktop{
-    @media (min-width:1100px){
-        display:grid;
-        grid-template-columns: repeat(3, 1fr);
-        column-gap:map-get($sizes,padding)*2;
-        align-items: baseline;
-    }
-  }
-  /*section restaurants*/
-  .restaurants {
+  @media (min-width: 1100px) {
+    padding: 0;
     display: grid;
-    column-gap: $gap;
-    row-gap: $gap;
-    background-color: $background-color;
-    border-radius: 0;
-    margin: 0;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    padding: $padding-section;
-    &_container {
-      @media (min-width: 1100px) {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 1fr;
-        column-gap: $gap;
-      }
-      @media (max-width: 1100px) {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto repeat(4, 1fr) auto;
-        row-gap: map-get($sizes,padding);
-      }
+    grid-template-columns: 1fr;
+    font-weight: bold;
+  }
+}
+
+/*Rectangle-nouveau*/
+.nouveau{ 
+  margin:map-get($sizes,padding);;
+  padding:0.5rem map-get($sizes,padding);
+  position:absolute;
+  z-index:2;
+  top:0;
+  right:0;
+  color:$dark-color-tertiary;
+  background-color:$color-tertiary;
+  animation: nouv 1500ms 4500ms alternate;
+}
+@keyframes nouv{
+  from{
+    transform:rotatex(0turn);
+  }
+  to{
+    transform:rotatex(1turn);
+  }
+}
+
+/*Version ordi - menu 3 colonnes et 2 colonnes header*/
+.menudesktop{
+  @media (min-width:1100px){
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap:map-get($sizes,padding)*2;
+      align-items: baseline;
+  }
+}
+.headerdesktop{
+  @media (min-width:1100px){
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+
+/*section restaurants*/
+.restaurants {
+  display: grid;
+  column-gap: $gap;
+  row-gap: $gap;
+  background-color: $background-color;
+  border-radius: 0;
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: $padding-section;
+  &_container {
+    @media (min-width: 1100px) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr;
+      column-gap: $gap;
     }
-    &_title {
-      grid-column: 1/-1;
-      padding: map-get($sizes,padding) 0rem;
-      margin: $margin-part 0px;
+    @media (max-width: 1100px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto repeat(4, 1fr) auto;
+      row-gap: map-get($sizes,padding);
+    }
+  }
+  &_title {
+    grid-column: 1/-1;
+    padding: map-get($sizes,padding) 0rem;
+    margin: $margin-part 0px;
       @media (min-width: 1100px) {
         padding-top: $margin-part;
       }
@@ -285,98 +288,95 @@
         grid-column: 1/-1;
         grid-row: 1/1;
       }
+  }
+  &_card {
+    box-shadow: 0 0 map-get($sizes,margin) $border-color-card;
+    border-radius: $border-radius-part;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: $size-card-mobile;
+    transition-duration: 0.1s;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom:map-get($sizes,margin);
+    &:hover {
+      transform: scale(1.02);
     }
-    &_card {
-      box-shadow: 0 0 map-get($sizes,margin) $border-color-card;
-      border-radius: $border-radius-part;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
-      height: $size-card-mobile;
-      transition-duration: 0.1s;
-      margin-right: 0px;
-      margin-left: 0px;
-      margin-bottom:map-get($sizes,margin);
-      &:hover {
-        transform: scale(1.02);
-      }
       @media (min-width: 1100px) {
         height: $size-card;
         width: 100%;
       }
+  }
+  &_card1 {
+    @media (max-width: 1100px) {
+      grid-column: 2/2;
+      grid-row: 2/2;
     }
-    &_card1 {
-      @media (max-width: 1100px) {
-        grid-column: 2/2;
-        grid-row: 2/2;
-      }
+  }
+  &_card2 {
+    @media (max-width: 1100px) {
+      grid-column: 2/2;
+      grid-row: 3/3;
     }
-    &_card2 {
-      @media (max-width: 1100px) {
-        grid-column: 2/2;
-        grid-row: 3/3;
-      }
+  }
+  &_card3 {
+    @media (max-width: 1100px) {
+      grid-column: 2/2;
+      grid-row: 4/4;
     }
-    &_card3 {
-      @media (max-width: 1100px) {
-        grid-column: 2/2;
-        grid-row: 4/4;
-      }
+  }
+  &_card4 {
+    @media (max-width: 1100px) {
+      grid-column: 2/2;
+      grid-row: 5/5;
     }
-    &_card4 {
-      @media (max-width: 1100px) {
-        grid-column: 2/2;
-        grid-row: 5/5;
-      }
-    }
-    &_cardwrapimg {
-      position: relative;
-      flex: 1;
-    }
-    &_cardwrapimgImg {
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-      z-index:1;
-    }
-    &_cardfooter {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      background-color:$color-white;
-    }
-    &_cardDesc {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      padding:$card-decs;
-    }
+  }
+  &_cardwrapimg {
+    position: relative;
+    flex: 1;
+  }
+  &_cardwrapimgImg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index:1;
+  }
+  &_cardfooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color:$color-white;
+  }
+  &_cardDesc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding:$card-decs;
+  }
 
-    &_byline {
-      margin:$margin-byline;
-      font-size: 100%;
-    }
+  &_byline {
+    margin:$margin-byline;
+    font-size: 100%;
+  }
     @media (min-width: 1100px) {
-      background-color: $color-white;
-    }
-/*heart-logo revoir*/
-&_logo {
-      font-size: $size-heart-logo;
-      margin-top:map-get($sizes,margin);
-      margin-right: map-get($sizes,margin);  
-      margin-bottom:$margin-heart;
-      cursor:pointer;
-    &:hover:before{
-      transition: all .8s ease-in-out;
-      -webkit-text-fill-color: transparent;
-      background-image: linear-gradient(0deg, $color-primary, $color-secondary);
-      background-clip:text;
+    background-color: $color-white;
     }
 }
 
+/*logo coeur*/
+.restaurants_logo {
+  font-size: $size-heart-logo;
+  margin-top:map-get($sizes,margin);
+  margin-right: map-get($sizes,margin);  
+  margin-bottom:$margin-heart;
+  cursor:pointer;
+&:hover:before{
+  transition: all .8s ease-in-out;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(0deg, $color-primary, $color-secondary);
+  background-clip:text;
 }
-
-
- 
+}
