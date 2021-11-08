@@ -17,7 +17,7 @@ body {
   font-style: normal;
   font-weight: normal;
   margin: auto;
-  height: auto;
+  height: 100%;
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
@@ -33,7 +33,7 @@ a {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 500;
   font-family: "Shrikhand", cursif;
 }
@@ -47,6 +47,9 @@ h2 {
 h3 {
   padding-top: 10px;
   margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /*Footer*/
@@ -114,23 +117,37 @@ h3 {
 
 /*revoir*/
 .loader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
   height: 100%;
   width: 100%;
-  animation: load 400ms linear;
-  background-color: #9370DC;
+  animation-name: load;
+  animation-duration: 5000ms;
+  animation-direction: reverse;
+  background-color: #9356DC;
+  z-index: -1;
 }
 
 @keyframes load {
   0% {
-    width: 0%;
+    opacity: 0;
   }
   50% {
-    width: 0%;
+    opacity: 0;
   }
   100% {
-    width: 100%;
+    opacity: 1;
   }
 }
+.closeloader {
+  z-index: 5;
+  animation-name: load;
+  animation-duration: 3000ms;
+}
+
 .headerlogo {
   text-align: center;
   padding: 1rem;
@@ -353,7 +370,7 @@ h3 {
   right: 0;
   color: #006633;
   background-color: #99E2D0;
-  animation: nouv 1500ms infinite;
+  animation: nouv 1500ms 4500ms alternate;
 }
 
 @keyframes nouv {
@@ -385,7 +402,7 @@ h3 {
   display: flex;
   flex-direction: column;
   padding: 25px;
-  /* revoir*/
+  /*heart-logo revoir*/
 }
 @media (min-width: 1100px) {
   .restaurants_container {
@@ -502,14 +519,12 @@ h3 {
   margin-right: 20px;
   margin-bottom: 25px;
   cursor: pointer;
-  transform: scale(1);
 }
-.restaurants_logo::before:hover {
-  color: transparent;
+.restaurants_logo:hover:before {
+  transition: all 0.8s ease-in-out;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
   background-clip: text;
-  background-color: linear-gradient(0deg, #9356DC, #FF79DA);
-  transition: transform all 250ms both;
-  transform: background-color;
 }
 
 .headerlogo {
@@ -578,13 +593,14 @@ h3 {
 .menu_headerlogo {
   font-size: 28px;
   padding: 0px 10px;
-  transition: transform 80s all;
-  background-clip: text;
+  cursor: pointer;
+  transition: transform 80s opacity 220ms backwards;
 }
 .menu_headerlogo:hover::before {
   background-image: linear-gradient(0deg, #9356DC, #FF79DA);
   opacity: 1;
   transform: scale(1);
+  background-clip: text;
 }
 .menu_entrées, .menu_plats, .menu_desserts {
   display: flex;
@@ -605,6 +621,7 @@ h3 {
   padding: 0.3rem 0.8rem;
   padding-top: 5px;
   width: 100%;
+  min-width: 80%;
   height: 71px;
   border-radius: 1.3rem;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(136, 136, 136, 0.25);
@@ -620,11 +637,9 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
   border-radius: 1.3rem;
   margin-right: 0;
   cursor: pointer;
-  z-index: 2;
 }
 .menu .check span {
   display: block;
@@ -632,10 +647,10 @@ h3 {
   transition: transform 300ms ease-in-out 50ms;
 }
 .menu .check:hover {
-  width: 15%;
-  max-width: 15%;
+  width: 85px;
+  max-width: 85px;
   border-radius: 0rem 1.5rem 1.5rem 0rem;
-  animation: slide 430ms linear backwards;
+  animation: slide 430ms linear;
 }
 .menu .check:hover span {
   transform: rotate(1turn);
@@ -644,8 +659,8 @@ h3 {
   0% {
     width: 0%;
   }
-  50% {
-    width: 15%;
+  100% {
+    width: 85px;
   }
 }
 .menu_allcard {
@@ -689,11 +704,10 @@ h3 {
 .menu_allcard:hover .menu_card {
   border-radius: 1.5rem 0rem 0rem 1.5rem;
   cursor: pointer;
-  z-index: 1;
 }
 .menu_allcard:hover .menu_card:hover + .check {
   border-radius: 0rem 1.5rem 1.5rem 0rem;
-  width: 15%;
+  width: 85px;
   opacity: 1;
   animation: slide 430ms linear backwards;
   transform-origin: right;
@@ -713,9 +727,6 @@ h3 {
 .menu_cardtitle {
   margin: 0;
   font-size: 18px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .menu_desc {
   display: flex;

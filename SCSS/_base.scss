@@ -5,7 +5,7 @@ body {
   font-style: normal;
   font-weight: normal;
   margin: auto;
-  height: auto; 
+  height: 100%; 
   width: 100%;
   max-width:100%;
   overflow-x: hidden;
@@ -18,18 +18,21 @@ a {
   color: $color-black;
 }
 h1{
-  font-size: 30px;
-  font-weight: 500;
+  font-size: $font-size-heart;
+  font-weight:500;
   font-family: "Shrikhand", cursif;
 }
 h2{
-  padding:5px;
+  padding:$little-padding;
   padding-left:0px;
   margin:0;
 }
 h3{
   padding-top:10px;
   margin:0;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
 }
 
 /*Footer*/

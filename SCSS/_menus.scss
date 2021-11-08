@@ -54,13 +54,14 @@
 &_headerlogo{
     font-size:$font-size-heart;
     padding:0px $padding-logo-header;
-    transition: transform 80s all;
-    background-clip:text;
+    cursor:pointer;
+    transition: transform 80s opacity 220ms backwards;
     &:hover{
         &::before{
         @include degrade;
         opacity:1;
         transform:scale(1);
+        background-clip:text;
         }
     }
 }
@@ -83,6 +84,7 @@
     padding:$padding-card;
     padding-top:$little-padding;
     width:100%;
+    min-width:80%;
     height:$height-card;
     border-radius:$border-radius-card;
     box-shadow: $box-shadow-card;
@@ -98,11 +100,9 @@
     display:flex;
     justify-content:center;
     align-items:center;
-    flex-wrap:nowrap;
     border-radius:$border-radius-check;
     margin-right:0;
     cursor:pointer;
-    z-index:2;
     span{
         display:block;
         transform:rotate(0turn);
@@ -112,7 +112,7 @@
         width:$check-width;
         max-width:$check-width;
         border-radius:$border-radius-check-hover;
-        animation: slide 430ms linear backwards;
+        animation: slide 430ms linear;
         span{
             transform:rotate(1turn);
         }
@@ -122,7 +122,7 @@
     0%{
 width:0%;
     }
-    50%{
+    100%{
 width:$check-width;
     }
 }
@@ -167,7 +167,7 @@ width:$check-width;
         .menu_card{
             border-radius: $border-radius-allcards;
             cursor:pointer;
-            z-index:1;
+            
             &:hover + .check{
                 border-radius:$border-radius-check-hover;
                 width:$check-width;
@@ -193,9 +193,6 @@ width:$check-width;
 &_cardtitle{
     margin: 0;
     font-size:$card-tittle;
-    white-space:nowrap;
-    overflow:hidden;
-    text-overflow:ellipsis;
 }
 &_desc{
    display:flex;
