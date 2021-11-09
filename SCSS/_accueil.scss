@@ -178,7 +178,7 @@ transform:rotate(0);
   &_part {
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: baseline;
     font-weight: bold;
     font-size: map-get($sizes,padding);;
@@ -394,7 +394,8 @@ transform:rotate(0);
 .restaurants_logo {
   font-size: $size-heart-logo;
   margin-top:map-get($sizes,margin);
-  margin-right: map-get($sizes,margin);  
+  margin-right: map-get($sizes,margin);
+  margin-left: map-get($sizes,margin);   
   margin-bottom:$margin-heart;
   cursor:pointer;
 &:hover:before{

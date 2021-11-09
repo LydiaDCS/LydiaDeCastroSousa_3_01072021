@@ -314,7 +314,7 @@ h3 {
 .fonctionnement_part {
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: baseline;
   font-weight: bold;
   font-size: 1rem;
@@ -544,6 +544,7 @@ h3 {
   font-size: 25px;
   margin-top: 20px;
   margin-right: 20px;
+  margin-left: 20px;
   margin-bottom: 25px;
   cursor: pointer;
 }
@@ -749,7 +750,6 @@ h3 {
   height: 70px;
   font-size: 23px;
   width: 0%;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
