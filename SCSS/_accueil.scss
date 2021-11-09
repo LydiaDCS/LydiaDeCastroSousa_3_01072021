@@ -12,6 +12,21 @@
   animation-direction:reverse;
   background-color:$color-primary;
   z-index:-1;
+    &_element{
+      z-index:1;
+      position:relative;
+      left:50%;
+      top:50%;
+      margin:-100px 0 0 -100px;
+      border: 5px solid $color-secondary;
+      border-top-color:$color-tertiary;
+      border-bottom-color:$color-tertiary;
+      color:$color-primary;
+      border-radius:50%;
+      height:200px;
+      width:200px;
+      animation: rotate 0.5s linear both infinite;
+    }
 }
 @keyframes load{
   0%{
@@ -28,6 +43,15 @@
   z-index:5;
   animation-name:load;
   animation-duration:3000ms;
+}
+
+@keyframes rotate{
+0%{
+transform:rotate(0);
+}
+100%{
+  transform:rotate(360deg);
+}
 }
 
 /*Header*/

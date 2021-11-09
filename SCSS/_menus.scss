@@ -7,6 +7,7 @@
     text-align:center;
     z-index:2;
     &_arrowback{
+        display:inline-block;
         position:absolute;
         left:0;
         padding:$padding-section;
@@ -96,6 +97,7 @@
         height:$height-card;
         box-shadow: $box-shadow-card;
         background-color:$color-white; 
+        overflow:hidden;
         &--1{
             animation-delay:500ms;
         }

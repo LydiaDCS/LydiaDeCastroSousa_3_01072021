@@ -52,10 +52,6 @@ h3 {
   text-overflow: ellipsis;
 }
 
-.fa {
-  font-family: "Font Awesome 5 Free";
-}
-
 /*Footer*/
 .footer {
   background-color: #272626;
@@ -134,6 +130,21 @@ h3 {
   background-color: #9356DC;
   z-index: -1;
 }
+.loader_element {
+  z-index: 1;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  margin: -100px 0 0 -100px;
+  border: 5px solid #FF79DA;
+  border-top-color: #99E2D0;
+  border-bottom-color: #99E2D0;
+  color: #9356DC;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  animation: rotate 0.5s linear both infinite;
+}
 
 @keyframes load {
   0% {
@@ -152,6 +163,14 @@ h3 {
   animation-duration: 3000ms;
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /*Header*/
 .headerlogo {
   text-align: center;
@@ -545,6 +564,7 @@ h3 {
   z-index: 2;
 }
 .headerlogo_arrowback {
+  display: inline-block;
   position: absolute;
   left: 0;
   padding: 25px;
@@ -640,6 +660,7 @@ h3 {
   height: 70px;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(136, 136, 136, 0.25);
   background-color: #fff;
+  overflow: hidden;
 }
 .menu_allcard--1 {
   animation-delay: 500ms;
