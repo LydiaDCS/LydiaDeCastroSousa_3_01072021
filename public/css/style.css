@@ -45,7 +45,7 @@ h2 {
 }
 
 h3 {
-  padding-top: 10px;
+  padding-top: 5px;
   margin: 0;
   white-space: nowrap;
   overflow: hidden;
@@ -556,7 +556,6 @@ h3 {
 
 /*bannieres*/
 .menurestaurantsimg {
-  position: relative;
   z-index: 1;
   margin-bottom: -17%;
   height: 300px;
@@ -626,18 +625,8 @@ h3 {
   width: 45px;
   margin-bottom: 20px;
 }
-.menu_card {
-  background-color: #fff;
-  padding: 0.3rem 0.8rem;
-  padding-top: 5px;
-  width: 100%;
-  min-width: 80%;
-  height: 71px;
-  border-radius: 1.3rem;
-  box-shadow: 0.25rem 0.25rem 0.5rem rgba(136, 136, 136, 0.25);
-  position: relative;
-}
 .menu_allcard {
+  border-radius: 1.5rem;
   font-size: 1rem;
   display: flex;
   flex-direction: row;
@@ -647,6 +636,10 @@ h3 {
   animation: app 2000ms both 800ms;
   transform-origin: top;
   opacity: 0;
+  width: 100%;
+  height: 70px;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(136, 136, 136, 0.25);
+  background-color: #fff;
 }
 .menu_allcard--1 {
   animation-delay: 500ms;
@@ -683,7 +676,7 @@ h3 {
   border-radius: 0rem 1.5rem 1.5rem 0rem;
   width: 85px;
   opacity: 1;
-  animation: slide 430ms linear backwards;
+  animation: slide 430ms linear;
   transform-origin: right;
 }
 .menu_allcard:hover .menu_card:hover + .check span {
@@ -697,6 +690,11 @@ h3 {
     transform: scaley(1) translatey(0);
     opacity: 1;
   }
+}
+.menu_card {
+  width: 100%;
+  min-width: 80%;
+  padding: 0.3rem 0.8rem;
 }
 .menu_cardtitle {
   margin: 0;
@@ -727,14 +725,14 @@ h3 {
 .check {
   background-color: #99E2D0;
   color: white;
-  height: 71px;
+  height: 70px;
   font-size: 23px;
   width: 0%;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 1.3rem;
+  border-radius: 1.5rem;
   margin-right: 0;
   cursor: pointer;
 }
@@ -752,13 +750,27 @@ h3 {
 .check:hover span {
   transform: rotate(1turn);
 }
+.check:not(:hover) {
+  animation: slide-reverse 430ms linear;
+  border-radius: 0rem 1.5rem 1.5rem 0rem;
+}
 
 @keyframes slide {
   0% {
+    transition: scalex(0);
     width: 0%;
   }
   100% {
+    transition: scalex(1);
     width: 85px;
+  }
+}
+@keyframes slide-reverse {
+  0% {
+    width: 85px;
+  }
+  100% {
+    width: 0%;
   }
 }
 /*Bouton commander*/
