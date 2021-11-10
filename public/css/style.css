@@ -762,7 +762,7 @@ h3 {
 .check span {
   display: block;
   transform: rotate(0turn);
-  transition: transform 300ms ease-in-out 50ms;
+  transition: transform 300ms ease-in-out 150ms;
 }
 .check:hover {
   width: 85px;
@@ -774,17 +774,15 @@ h3 {
   transform: rotate(1turn);
 }
 .check:not(:hover) {
-  animation: slide-reverse 430ms linear;
+  animation: slide-reverse 250ms linear;
   border-radius: 0rem 1.5rem 1.5rem 0rem;
 }
 
 @keyframes slide {
   0% {
-    transition: scalex(0);
     width: 0%;
   }
   100% {
-    transition: scalex(1);
     width: 85px;
   }
 }

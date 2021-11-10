@@ -201,7 +201,7 @@
     span{
         display:block;
         transform:rotate(0turn);
-        transition:transform 300ms ease-in-out 50ms;
+        transition:transform 300ms ease-in-out 150ms;
     }
     &:hover{
         width:$check-width;
@@ -213,27 +213,25 @@
         }
     }
     &:not(:hover){
-        animation: slide-reverse 430ms linear;
+        animation: slide-reverse 250ms linear;
         border-radius:$border-radius-check-hover;
     }
 }
 @keyframes slide{
-    0%{
-        transition:scalex(0);
-width:0%;
+    0%{ 
+    width:0%;
     }
     100%{
-        transition:scalex(1);
-width:$check-width;
+    width:$check-width;
     }
 }
 
 @keyframes slide-reverse{
     0%{
-width:$check-width;
+    width:$check-width;
     }
     100%{
-width:0%;
+    width:0%;
     }
 }
 
