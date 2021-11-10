@@ -387,17 +387,8 @@ h3 {
   right: 0;
   color: #006633;
   background-color: #99E2D0;
-  animation: nouv 1500ms 4500ms alternate;
 }
 
-@keyframes nouv {
-  from {
-    transform: rotatex(0turn);
-  }
-  to {
-    transform: rotatex(1turn);
-  }
-}
 /*Version ordi - menu 3 colonnes et 2 colonnes header*/
 @media (min-width: 1100px) {
   .menudesktop {
@@ -549,12 +540,22 @@ h3 {
   cursor: pointer;
 }
 .restaurants_logo:hover:before {
-  transition: all 0.8s ease-in-out;
+  transition: all 220ms ease-in-out;
+  animation: heart 820ms fowards;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
-  background-clip: text;
+  font-weight: bold;
 }
 
+@keyframes heart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /*Header - logo & arrow*/
 .headerlogo {
   background-color: #fff;
@@ -627,10 +628,12 @@ h3 {
   cursor: pointer;
 }
 .menu_headerlogo:hover:before {
-  transition: all 0.8s ease-in-out;
+  transition: all 220ms ease-in-out;
+  animation: heart 820ms fowards;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
-  background-clip: text;
+  font-weight: bold;
 }
 .menu_entrées, .menu_plats, .menu_desserts {
   display: flex;

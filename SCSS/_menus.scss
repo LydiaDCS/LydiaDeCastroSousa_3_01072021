@@ -61,12 +61,14 @@
         font-size:$font-size-heart;
         padding:0px $padding-logo-header;
         cursor:pointer;
-        &:hover:before{
-            transition: all .8s ease-in-out;
-            -webkit-text-fill-color: transparent;
-            background-image: linear-gradient(0deg, $color-primary, $color-secondary);
-            background-clip:text;
-        }
+        &:hover:before{ 
+            transition: all 220ms ease-in-out;
+            animation: heart 820ms fowards;
+            background-image: $color-heart;
+            -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            font-weight:bold;
+          }
     }
     &_entrées, &_plats, &_desserts{
         display:flex;

@@ -248,15 +248,6 @@ transform:rotate(0);
   right:0;
   color:$dark-color-tertiary;
   background-color:$color-tertiary;
-  animation: nouv 1500ms 4500ms alternate;
-}
-@keyframes nouv{
-  from{
-    transform:rotatex(0turn);
-  }
-  to{
-    transform:rotatex(1turn);
-  }
 }
 
 /*Version ordi - menu 3 colonnes et 2 colonnes header*/
@@ -398,10 +389,20 @@ transform:rotate(0);
   margin-left: map-get($sizes,margin);   
   margin-bottom:$margin-heart;
   cursor:pointer;
-&:hover:before{
-  transition: all .8s ease-in-out;
-  -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(0deg, $color-primary, $color-secondary);
-  background-clip:text;
+&:hover:before{ 
+  transition: all 220ms ease-in-out;
+  animation: heart 820ms fowards;
+  background-image: $color-heart;
+  -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  font-weight:bold;
 }
+}
+@keyframes heart{
+  0%{
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+  }
 }
