@@ -391,16 +391,17 @@ transform:rotate(0);
 /*logo coeur*/
 .restaurants_logo {
   font-size: $size-heart-logo;
+  padding:$little-padding;
   margin-top:map-get($sizes,margin);
   margin-right: map-get($sizes,margin);
   margin-left: map-get($sizes,margin);   
   margin-bottom:$margin-heart;
   cursor:pointer;
-&:hover:before{ 
-  transition: all 220ms ease-in-out;
-  background-image: $color-heart;
-  -webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-  font-weight:bold;
-}
+  &:hover:before{ 
+    transition: all 220ms ease-in-out;
+    background-image: $color-heart;
+    -webkit-background-clip: text;
+	  -webkit-text-fill-color: transparent;
+    font-weight:bold;
+  } 
 }
