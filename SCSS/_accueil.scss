@@ -398,18 +398,9 @@ transform:rotate(0);
   cursor:pointer;
 &:hover:before{ 
   transition: all 220ms ease-in-out;
-  animation: heart 820ms fowards;
   background-image: $color-heart;
   -webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
   font-weight:bold;
 }
-}
-@keyframes heart{
-  0%{
-    opacity:0;
-  }
-  100%{
-    opacity:1;
-  }
 }
