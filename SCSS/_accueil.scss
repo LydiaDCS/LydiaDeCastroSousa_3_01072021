@@ -8,7 +8,7 @@
   height:100%;
   width:100%;
   animation-name: load; 
-  animation-duration:5000ms;
+  animation-duration:3000ms;
   animation-direction:reverse;
   background-color:$color-primary;
   z-index:-1;
@@ -30,28 +30,28 @@
 }
 @keyframes load{
   0%{
-  opacity:0;
+    opacity:0;
   }
-  50%{
-  opacity:0;    
+  40%{
+    opacity:0;    
   }
   100%{
-  opacity:1;
+    opacity:1;
   }
 }
 .closeloader{
   z-index:5;
   animation-name:load;
-  animation-duration:3000ms;
+  animation-duration:2000ms;
 }
 
 @keyframes rotate{
-0%{
-transform:rotate(0);
-}
-100%{
-  transform:rotate(360deg);
-}
+  0%{
+    transform:rotate(0);
+  }
+  100%{
+    transform:rotate(360deg);
+  }
 }
 
 /*Header*/
@@ -64,94 +64,95 @@ transform:rotate(0);
   flex-direction:row;
   justify-content: center;
   align-items: center;
-  &_img {
-    margin: 0;
-  }
+    &_img {
+      margin: 0;
+    }
 }
 .headerreservationloca {
   display: flex;
   flex-direction: column;
   text-align: center;
-  &_container {
-    padding:$padding-herderreservation;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: baseline;
-    background-color: $gray;
-    width: 100%;
-    @include inset-shadow;
-      @media (max-width:1100px){
-        padding:$padding-herderreservation-mobile;
-      }
-  }
-  &_logo {
-    margin-right: $margin-logo;
-    font-size: $font-size;
-    text-align:center;
-      @media (min-width: 1100px) {
+    &_container {
+      padding:$padding-herderreservation;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: baseline;
+      background-color: $gray;
+      width: 100%;
+      @include inset-shadow;
+        @media (max-width:1100px){
+          padding:$padding-herderreservation-mobile;
+        }
+    }
+    &_logo {
+      margin-right: $margin-logo;
+      font-size: $font-size;
+      text-align:center;
+        @media (min-width: 1100px) {
+          font-size: $bigger-font-size;
+          height: 100%;
+          max-height: 100%;
+        }
+    }
+    &_texte {
+      margin: 0;
+      font-size:$font-size;
+      padding-right: $padding-section;
+      border:none;
+      background-color: $gray;
+      color:$color-black;
+      text-align:center;
+      width:$input-width-mobile;
+        @media (min-width:1100px){
         font-size: $bigger-font-size;
-        height: 100%;
-        max-height: 100%;
-      }
-  }
-  &_texte {
-    margin: 0;
-    font-size:$font-size;
-    padding-right: $padding-section;
-    border:none;
-    background-color: $gray;
-    color:$color-black;
-    text-align:center;
-    width:$input-width-mobile;
-      @media (min-width:1100px){
-      font-size: $bigger-font-size;
-      font-weight:bold;
-      width:$input-width;
-      }
-  }
+        font-weight:bold;
+        width:$input-width;
+        }
+    }
 }
 .headerreservationtexte {
   background-color: $light-gray;
   padding: $padding-herderreservation-texte;
   padding-bottom:$padding-herderreservation-texte;
-  &_title {
-    margin: 0;
-    font-size: $bigger-font-size;
-  }
-  &_byline {
-    margin-bottom:$margin-herderreservation-texte-byline;
-    color:$dark-gray;
-      @media (min-width: 1100px) {
-        font-size: $font-size;
-        margin-bottom: $margin-herderreservation-texte-byline*1.5;
-      }
-  }
-  &_bouton {
-    border: 0;
-    padding: $padding-bouton;
-    font-weight: $font-weight-bouton;
-    font-size: $font-size-bouton;
-    border-radius: $border-radius-bouton;
-    color: $color-white;
-    cursor: pointer;
-    box-shadow: $box-shadow-bouton;
-    @include degrade;
-    transition: all 250ms ease-in-out;
-    display: inline-block;
-      &:hover{
-        background-image: linear-gradient(0deg, $color-primary-light, $color-secondary-light) ;
-        box-shadow: $box-shadow-bouton-hover;
-      }
-        @media (min-width: 1100px){
-        font-size: $font-size;
+    &_title {
+      margin: 0;
+      font-size: $bigger-font-size;
+    }
+    &_byline {
+      margin-bottom:$margin-herderreservation-texte-byline;
+      color:$dark-gray;
+      font-weight:lighter;
+        @media (min-width: 1100px) {
+          font-size: $font-size;
+          margin-bottom: $margin-herderreservation-texte-byline*1.5;
         }
-  }
-    @media (min-width: 1100px) {
-      @include inset-shadow;
-      height: 100%;
-      max-height: 100%;
-   }
+    }
+    &_bouton {
+      border: 0;
+      padding: $padding-bouton;
+      font-weight: $font-weight-bouton;
+      font-size: $font-size-bouton;
+      border-radius: $border-radius-bouton;
+      color: $color-white;
+      cursor: pointer;
+      box-shadow: $box-shadow-bouton;
+      @include degrade;
+      transition: all 250ms ease-in-out;
+      display: inline-block;
+        &:hover{
+          background-image: linear-gradient(0deg, $color-primary-light, $color-secondary-light) ;
+          box-shadow: $box-shadow-bouton-hover;
+        }
+          @media (min-width: 1100px){
+          font-size: $font-size;
+          }
+    }
+      @media (min-width: 1100px) {
+        @include inset-shadow;
+        height: 100%;
+        max-height: 100%;
+      }
 }
 
 /*Fonctionnement*/
@@ -159,9 +160,11 @@ transform:rotate(0);
   padding: $padding-fonctionnement;
   background-color: $color-white;
   &_title {
+    margin-left:$margin-left-fontionnement-title;
     margin-top: 0;
     margin-bottom: $margin-fonctionnement;
       @media (min-width: 1100px) {
+        margin-left:0;
         background-color: $gray;
         padding: $padding-fonctionnement-title;
         margin-bottom: 0;
@@ -390,6 +393,7 @@ transform:rotate(0);
 
 /*logo coeur*/
 .restaurants_logo {
+  font-weight:100;
   font-size: $size-heart-logo;
   padding:$little-padding;
   margin-top:map-get($sizes,margin);

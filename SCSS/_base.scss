@@ -26,6 +26,7 @@ h2{
   padding:$little-padding;
   padding-left:0px;
   margin:0;
+  font-weight:900;
 }
 h3{
   padding-top:$little-padding;
@@ -37,16 +38,16 @@ h3{
 
 /*Footer*/
 .footer {
-  background-color: rgb(39, 38, 38);
+  background-color:$color-footer;
   height: 100%;
   color: $color-white;
-  padding: 2rem 2rem;
+  padding: $padding-footer;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   @media (min-width:1000px){
-    padding:2rem 4rem;
+    padding:$padding-footer-mobile;
   }
   &_img {
     margin-right: 10px;

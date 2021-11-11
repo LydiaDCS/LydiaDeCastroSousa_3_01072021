@@ -14,6 +14,7 @@ $color-black:#000;
 $background-color:#f6f6f6;
 $shadows-color:#afaeae;
 $color-heart:linear-gradient($color-primary,$color-secondary);
+$color-footer:#353535;
 
 /*Tailes*/
 $bigger-font-size:23px;
@@ -25,11 +26,11 @@ $sizes:(padding:1rem, margin:20px);
 
 /*Headerreservation*/
 $padding-section:25px;
-$padding-herderreservation:10.75px 0;
+$padding-herderreservation:10.75px 0px;
 $padding-herderreservation-mobile:4px 0;
 $input-width:200px;
 $input-width-mobile:170px;
-$padding-herderreservation-texte:49px;
+$padding-herderreservation-texte:45px;
 $margin-herderreservation-texte-byline:40px;
 
 /*Bouton*/
@@ -43,7 +44,7 @@ $box-shadow-bouton-hover:5px 5px 10px rgba(7, 7, 7, 0.4);
 $margin-bouton:15px;
 
 /*Fonctionnement*/
-$padding-fonctionnement:3rem 1.5rem 3rem 2rem;
+$padding-fonctionnement:2rem 1.5rem 3rem 1.7rem;
 $margin-fonctionnement:30px;
 $padding-fonctionnement-title:21px 0px;
 $padding-step:30px 70px;
@@ -51,7 +52,8 @@ $padding-part:1.5rem;
 $border-radius-part:1.5rem;
 $box-shadow-part:0.25rem 0.25rem 0.5rem rgba(136, 136, 136, 0.25);
 $margin-part:10px;
-$padding-number:8px 12px;
+$margin-left-fontionnement-title:-3px;
+$padding-number:6px 10px;
 $border-radius-number:50%;
 $size-number:15px;
 
@@ -66,6 +68,7 @@ $margin-heart:$padding-section;
 $border-color-card:#0000002e;
 
 /*Menu*/
+$padding-section-menu:15px;
 $border-radius-menu:50px 50px 0 0;
 $font-size-heart:28px;
 $padding-logo-header:$margin-part;
@@ -74,19 +77,23 @@ $border-bottom-size:3.5px;
 $little-padding:5px;
 $padding-card:0.3rem 0.8rem;
 $height-card:70px;
-$border-radius-card:1.5rem;
+$border-radius-card:1.2rem;
 $box-shadow-card:0.25rem 0.25rem 0.5rem rgba(136, 136, 136, 0.25);
 
 /*Cards*/
 $height-check:$height-card;
 $border-radius-check:$border-radius-card;
-$border-radius-check-hover:0rem 1.5rem 1.5rem 0rem;
+$border-radius-check-hover:0rem 1.2rem 1.2rem 0rem;
 $check-width:85px;
 $margin-cards:$margin-bouton;
-$border-radius-allcards:1.5rem 0rem 0rem 1.5rem;
+$border-radius-allcards:1.2rem 0rem 0rem 1.2rem;
 $card-tittle:18px;
 $desc-size:15.5px;
 $margin-decsprice:$margin-part;
+
+/*Footer*/
+$padding-footer:2rem 2rem;
+$padding-footer-mobile:2rem 4rem;
 
 
 

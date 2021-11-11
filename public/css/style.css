@@ -10,6 +10,7 @@
 /*Restaurants*/
 /*Menu*/
 /*Cards*/
+/*Footer*/
 /*Toutes les pages*/
 html,
 body {
@@ -42,6 +43,7 @@ h2 {
   padding: 5px;
   padding-left: 0px;
   margin: 0;
+  font-weight: 900;
 }
 
 h3 {
@@ -54,7 +56,7 @@ h3 {
 
 /*Footer*/
 .footer {
-  background-color: #272626;
+  background-color: #353535;
   height: 100%;
   color: #fff;
   padding: 2rem 2rem;
@@ -125,7 +127,7 @@ h3 {
   height: 100%;
   width: 100%;
   animation-name: load;
-  animation-duration: 5000ms;
+  animation-duration: 3000ms;
   animation-direction: reverse;
   background-color: #9356DC;
   z-index: -1;
@@ -150,7 +152,7 @@ h3 {
   0% {
     opacity: 0;
   }
-  50% {
+  40% {
     opacity: 0;
   }
   100% {
@@ -160,7 +162,7 @@ h3 {
 .closeloader {
   z-index: 5;
   animation-name: load;
-  animation-duration: 3000ms;
+  animation-duration: 2000ms;
 }
 
 @keyframes rotate {
@@ -192,7 +194,7 @@ h3 {
   text-align: center;
 }
 .headerreservationloca_container {
-  padding: 10.75px 0;
+  padding: 10.75px 0px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -238,8 +240,8 @@ h3 {
 
 .headerreservationtexte {
   background-color: #f5f5f5;
-  padding: 49px;
-  padding-bottom: 49px;
+  padding: 45px;
+  padding-bottom: 45px;
 }
 .headerreservationtexte_title {
   margin: 0;
@@ -248,6 +250,7 @@ h3 {
 .headerreservationtexte_byline {
   margin-bottom: 40px;
   color: #525252;
+  font-weight: lighter;
 }
 @media (min-width: 1100px) {
   .headerreservationtexte_byline {
@@ -287,15 +290,17 @@ h3 {
 
 /*Fonctionnement*/
 .fonctionnement {
-  padding: 3rem 1.5rem 3rem 2rem;
+  padding: 2rem 1.5rem 3rem 1.7rem;
   background-color: #fff;
 }
 .fonctionnement_title {
+  margin-left: -3px;
   margin-top: 0;
   margin-bottom: 30px;
 }
 @media (min-width: 1100px) {
   .fonctionnement_title {
+    margin-left: 0;
     background-color: #e9e9e9;
     padding: 21px 0px;
     margin-bottom: 0;
@@ -355,7 +360,7 @@ h3 {
   margin-top: 10px;
 }
 .fonctionnement_number {
-  padding: 8px 12px;
+  padding: 6px 10px;
   background-color: #9356DC;
   color: #fff;
   border-radius: 50%;
@@ -539,6 +544,7 @@ h3 {
 
 /*logo coeur*/
 .restaurants_logo {
+  font-weight: 100;
   font-size: 25px;
   padding: 5px;
   margin-top: 20px;
@@ -611,7 +617,7 @@ h3 {
   display: flex;
   flex-direction: column;
   background-color: #f6f6f6;
-  padding: 25px;
+  padding: 15px;
   border-radius: 50px 50px 0 0;
   /*revoir logo*/
 }
@@ -648,7 +654,7 @@ h3 {
   margin-bottom: 20px;
 }
 .menu_allcard {
-  border-radius: 1.5rem;
+  border-radius: 1.2rem;
   font-size: 1rem;
   display: flex;
   flex-direction: row;
@@ -692,11 +698,11 @@ h3 {
   animation-delay: 4500ms;
 }
 .menu_allcard:hover .menu_card {
-  border-radius: 1.5rem 0rem 0rem 1.5rem;
+  border-radius: 1.2rem 0rem 0rem 1.2rem;
   cursor: pointer;
 }
 .menu_allcard:hover .menu_card:hover + .check {
-  border-radius: 0rem 1.5rem 1.5rem 0rem;
+  border-radius: 0rem 1.2rem 1.2rem 0rem;
   width: 85px;
   opacity: 1;
   animation: slide 430ms linear;
@@ -738,6 +744,7 @@ h3 {
   overflow: hidden;
   text-overflow: ellipsis;
   padding-top: 5px;
+  font-weight: lighter;
 }
 .menu_descprice {
   margin-right: 10px;
@@ -754,7 +761,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 1.5rem;
+  border-radius: 1.2rem;
   margin-right: 0;
   cursor: pointer;
 }
@@ -766,7 +773,7 @@ h3 {
 .check:hover {
   width: 85px;
   max-width: 85px;
-  border-radius: 0rem 1.5rem 1.5rem 0rem;
+  border-radius: 0rem 1.2rem 1.2rem 0rem;
   animation: slide 430ms linear;
 }
 .check:hover span {
@@ -774,7 +781,7 @@ h3 {
 }
 .check:not(:hover) {
   animation: slide-reverse 200ms linear;
-  border-radius: 0rem 1.5rem 1.5rem 0rem;
+  border-radius: 0rem 1.2rem 1.2rem 0rem;
 }
 
 @keyframes slide {
