@@ -628,7 +628,6 @@ h3 {
 }
 .menu_headerlogo:hover:before {
   transition: all 220ms ease-in-out;
-  animation: heart 820ms fowards;
   background-image: linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -762,7 +761,7 @@ h3 {
 .check span {
   display: block;
   transform: rotate(0turn);
-  transition: transform 300ms ease-in-out 150ms;
+  transition: transform 300ms ease-in-out 125ms;
 }
 .check:hover {
   width: 85px;
@@ -774,7 +773,7 @@ h3 {
   transform: rotate(1turn);
 }
 .check:not(:hover) {
-  animation: slide-reverse 250ms linear;
+  animation: slide-reverse 200ms linear;
   border-radius: 0rem 1.5rem 1.5rem 0rem;
 }
 
