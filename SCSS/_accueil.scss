@@ -405,7 +405,7 @@
   margin-bottom:$margin-heart;
   cursor:pointer;
     &:hover:before{ 
-      transition: all 220ms ease-in-out;
+      transition: all 200ms ease-in-out;
       background-image: $color-heart;
       -webkit-background-clip: text;
 	    -webkit-text-fill-color: transparent;
