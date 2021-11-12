@@ -19,14 +19,14 @@ a {
 }
 h1{
   font-size: $font-size-heart;
-  font-weight:500;
+  font-weight:$font-weight-h1;
   font-family: "Shrikhand", cursif;
 }
 h2{
   padding:$little-padding;
   padding-left:0px;
   margin:0;
-  font-weight:900;
+  font-weight:$font-weight-h2;
 }
 h3{
   padding-top:$little-padding;
@@ -37,56 +37,55 @@ h3{
 }
 
 /*Footer*/
-.footer {
+.footer{
   background-color:$color-footer;
-  height: 100%;
   color: $color-white;
   padding: $padding-footer;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  @media (min-width:1000px){
-    padding:$padding-footer-mobile;
-  }
-  &_img {
-    margin-right: 10px;
-    font-size: 9px;
     @media (min-width:1000px){
-      font-size:20px;
+      padding:$padding-footer-mobile;
     }
-  }
-  &_logo {
-    font-family: "Shrikhand", cursif;
-    font-size: 1.5rem;
-    font-weight: 400;
-    @media (min-width:1000px){
-      font-size:1.7rem;
-    }
-  }
-  &_link {
-    color: $color-white;
-    font-weight: 300;
-    &:hover{
-      color:$color-primary;
-    }
-    @media (min-width:1000px){
-      font-size:18px;
-    }
-  }
-  &_list {
-    list-style: none;
-    padding: 0px 0px;
-    width: 100%;
-    @media (min-width:1000px){
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-  }
-  &_listtexte {
-    padding-bottom: 10px;
-  }
+      &_img {
+        margin-right: $margin-part;
+        font-size: $font-size-logo;
+          @media (min-width:1000px){
+            font-size:$font-size;
+          }
+      }
+      &_logo {
+        font-family: "Shrikhand", cursif;
+        font-size: $bigger-font-size;
+        font-weight: $font-weight-logo-footer;
+          @media (min-width:1000px){
+            font-size:$font-size-desktopversion;
+          }
+      }
+      &_link {
+        color: $color-white;
+        font-weight:$font-weight-link;
+          &:hover{
+            color:$color-primary;
+          }
+            @media (min-width:1000px){
+              font-size:$font-size;
+            }
+      }
+      &_list {
+        list-style: none;
+        padding: 0px 0px;
+        width: 100%;
+          @media (min-width:1000px){
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+          }
+      }
+      &_listtexte {
+        padding-bottom: $margin-part;
+      }
 }
 
 

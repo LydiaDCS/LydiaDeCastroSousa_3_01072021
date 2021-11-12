@@ -28,6 +28,7 @@
       animation: rotate 0.5s linear both infinite;
     }
 }
+
 @keyframes load{
   0%{
     opacity:0;
@@ -105,9 +106,9 @@
       text-align:center;
       width:$input-width-mobile;
         @media (min-width:1100px){
-        font-size: $bigger-font-size;
-        font-weight:bold;
-        width:$input-width;
+          font-size: $bigger-font-size;
+          font-weight:bold;
+          width:$input-width;
         }
     }
 }
@@ -121,7 +122,7 @@
     }
     &_byline {
       margin-bottom:$margin-herderreservation-texte-byline;
-      color:$dark-gray;
+      color:$darken-gray;
       font-weight:lighter;
         @media (min-width: 1100px) {
           font-size: $font-size;
@@ -145,7 +146,7 @@
           box-shadow: $box-shadow-bouton-hover;
         }
           @media (min-width: 1100px){
-          font-size: $font-size;
+            font-size: $font-size;
           }
     }
       @media (min-width: 1100px) {
@@ -198,16 +199,17 @@
     border-radius: $border-radius-part;
     box-shadow: $box-shadow-part;
     position: relative;
-    &:hover {
-      cursor: pointer;
-      transform: scale(1.02);
-      background-color: $light-purple;
-      .fonctionnement_logo{
-        color: $color-primary;
+      &:hover{
+        cursor: pointer;
+        transform: scale(1.02);
+        background-color: $light-purple;
+        .fonctionnement_logo{
+          color: $color-primary;
+        }
       }
-    }
       @media (min-width: 1100px) {
         background-color: $color-white;
+        font-size:$little-font-size;
       }
   }
   &_part:nth-child(1) {
@@ -269,7 +271,7 @@
       align-items: baseline;
   }
 }
-.headerdesktop{
+.desktopversion{
   @media (min-width:1100px){
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -326,13 +328,13 @@
     margin-right: 0px;
     margin-left: 0px;
     margin-bottom:map-get($sizes,margin);
-    &:hover {
-      transform: scale(1.02);
-    }
-      @media (min-width: 1100px) {
-        height: $size-card;
-        width: 100%;
+      &:hover {
+        transform: scale(1.02);
       }
+        @media (min-width: 1100px) {
+          height: $size-card;
+          width: 100%;
+        }
   }
   &_card1 {
     @media (max-width: 1100px) {
@@ -401,11 +403,11 @@
   margin-left: map-get($sizes,margin);   
   margin-bottom:$margin-heart;
   cursor:pointer;
-  &:hover:before{ 
-    transition: all 220ms ease-in-out;
-    background-image: $color-heart;
-    -webkit-background-clip: text;
-	  -webkit-text-fill-color: transparent;
-    font-weight:bold;
-  } 
+    &:hover:before{ 
+      transition: all 220ms ease-in-out;
+      background-image: $color-heart;
+      -webkit-background-clip: text;
+	    -webkit-text-fill-color: transparent;
+      font-weight:bold;
+    } 
 }
