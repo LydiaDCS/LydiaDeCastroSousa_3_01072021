@@ -91,6 +91,7 @@
       font-size: $font-size;
       text-align:center;
         @media (min-width: 1100px) {
+          margin-right:$margin-part;
           font-size: $bigger-font-size;
           height: 100%;
           max-height: 100%;
