@@ -251,27 +251,7 @@
   }
 }
 
-/*Rectangle-nouveau*/
-.nouveau{ 
-  margin:map-get($sizes,padding);;
-  padding:0.5rem map-get($sizes,padding);
-  position:absolute;
-  z-index:2;
-  top:0;
-  right:0;
-  color:$dark-color-tertiary;
-  background-color:$color-tertiary;
-}
-
-/*Version ordi - menu 3 colonnes et 2 colonnes header*/
-.menudesktop{
-  @media (min-width:1100px){
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      column-gap:map-get($sizes,padding)*2;
-      align-items: baseline;
-  }
-}
+/*Version ordi - 2 colonnes header*/
 .desktopversion{
   @media (min-width:1100px){
     display: grid;
@@ -289,8 +269,6 @@
   border-radius: 0;
   margin: 0;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
   padding: $padding-section;
   &_container {
     @media (min-width: 1100px) {
@@ -392,6 +370,18 @@
     @media (min-width: 1100px) {
     background-color: $color-white;
     }
+}
+
+/*Rectangle-nouveau*/
+.nouveau{ 
+  margin:map-get($sizes,padding);;
+  padding:0.5rem map-get($sizes,padding);
+  position:absolute;
+  z-index:2;
+  top:0;
+  right:0;
+  color:$dark-color-tertiary;
+  background-color:$color-tertiary;
 }
 
 /*logo coeur*/
