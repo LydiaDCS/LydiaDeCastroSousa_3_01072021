@@ -201,7 +201,6 @@
     box-shadow: $box-shadow-part;
     position: relative;
       &:hover{
-        cursor: pointer;
         transform: scale(1.02);
         background-color: $light-purple;
         .fonctionnement_logo{

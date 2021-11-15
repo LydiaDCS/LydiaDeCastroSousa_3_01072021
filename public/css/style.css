@@ -338,7 +338,6 @@ h3 {
   position: relative;
 }
 .fonctionnement_part:hover {
-  cursor: pointer;
   transform: scale(1.02);
   background-color: #e5dbf1;
 }
@@ -608,7 +607,7 @@ h3 {
   flex-direction: column;
   background-color: #f6f6f6;
   padding: 15px;
-  border-radius: 50px 50px 0 0;
+  border-radius: 35px 35px 0 0;
   /*logo*/
 }
 .menu_header {
